@@ -3,8 +3,19 @@ import {
     getAllUsersService,
     getUserByIdService,
     updateService,
-    deleteService} from './userService.js'
+    deleteService,
+    userVerificationService
+} from './userService.js'
 import passport from 'passport'
+import crypto from 'crypto'
+import User from './userModel.js'
+import _ from 'lodash'
+import sendEmail from '../../utils/mailer.js'
+import dotenv from 'dotenv'
+dotenv.config()
+
+
+
 
 const getAllUsers = async (req, res) => {
     const data = await getAllUsersService()
@@ -31,15 +42,50 @@ const updateUser = async (req, res)=>{
 }
 
 const createUser =async (req, res) => {
-   const userObj = { 
+   var userObj = { 
        username:req.body.username,
        fullname:req.body.fullname,
        email:req.body.email,
        password:req.body.password,
-       image:req.file.path
+       image:req.file.path,
+       emailToken:crypto.randomBytes(32).toString('hex')
    }
+   
+   const emailData = { 
+       reciever:req.body.email,
+       sender:process.env.SENDER_EMAIL,
+       emailToken:userObj.emailToken,
+       host:req.headers.host,
+       email:req.body.email
+    }
+  
+   sendEmail(emailData)
    const data = await createService(userObj)
-   return res.status(201).json(data)
+   return res.status(201).json({
+       success: true,
+       message: 'User registered successfully',
+       data
+   })
+  
+   
+}
+
+const emailVerify = async (req, res) => {
+    
+    try{
+        const user = await User.findOne({emailToken: req.query.token})
+        if(user){
+            user.emailToken = null
+            user.isVerified = true
+            await user.save()
+            res.json({success: true, message:`${user.fullname} is now verified.`, user})
+        } else
+             return res.json({success: false, message:"Token is not valid"})
+       
+    }catch(err){
+        console.log(err.message)
+    }
+   
 }
 
 
@@ -77,6 +123,6 @@ export {
     updateUser,
     deleteUser,
     login,
-    userProfile
+    userProfile, emailVerify
 
     }

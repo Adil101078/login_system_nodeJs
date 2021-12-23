@@ -5,14 +5,12 @@ import jwt from 'jsonwebtoken';
 
 const userSchema = new mongoose.Schema({
     username:{ type: String },
-    email:{type: String },
+    email:{type: String, required: true},
     fullname:{type: String },
-    password:{type: String },
+    password:{type: String, required: true},
     image:{type: String},
-    posts:[{ 
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Post'
-    }]
+    emailToken:{type:String},
+    isVerified:{type: Boolean, default:false}
 });
 
 userSchema.pre('save', function (next) {

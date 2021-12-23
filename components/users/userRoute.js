@@ -9,7 +9,8 @@ import {
   updateUser,
   deleteUser,
   login,
-  userProfile} 
+  userProfile, emailVerify
+} 
   from "./userController.js"
 
 const route = express.Router();
@@ -36,6 +37,7 @@ route.get('/:id', getUserById);
 route.put('/edit/:id', updateUser);
 route.delete('/delete/:id', deleteUser)
 route.post('/login',  login);
+route.patch('/verify-email', emailVerify);
 
 
 export default route
