@@ -28,33 +28,12 @@ const deleteService = async(id)=>{
   const result = await User.findByIdAndRemove(id)
   return {data:result}
 }
-const updateService = async(id,fullname, username, email, password, image)=>{
-  const userDetails = await User.findOneAndUpdate(
-      {
-    _id: mongoose.Types.ObjectId(id),
-  },
-        {
-    $set: {
-      ...(fullname && {
-        fullname,
-      }),
-      ...(username && {
-        username,
-      }),
-      ...(email && {
-        email,
-      }),
-      ...(password && {
-        password,
-      }),
-      ...(image && {
-        image,
-      })
-    },
-  },
-  { new: true }
-  )
-  return {data:userDetails}
+const updateService = async(id,obj)=>{
+  const userDetails = await User.findByIdAndUpdate(id, obj, {new:true})
+  return ({
+    message: 'User updated successfully',
+    userDetails
+  })
 }
 
 export {

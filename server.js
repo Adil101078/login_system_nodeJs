@@ -6,7 +6,8 @@ import mongoose from 'mongoose';
 import helmet from 'helmet'
 import cors from 'cors'
 import router from './components/index.js'
-import './auth/passportConfig.js'
+import AppError from './utils/appError.js'
+import globalErrorHandler from './helpers/globalErrorHandler.js'
 dotenv.config()
 const PORT = process.env.PORT || 9000;
 const app = express();
@@ -31,11 +32,18 @@ app.use(express.json());
 app.use(passport.initialize());
 app.use(helmet())
 app.use(cors())
+app.use(globalErrorHandler)
 
 
 //Routes
 
 app.use('/api/v1/', router)
+
+//Error handling for all routes
+// app.all('*',(req, res, next) => {
+//      next(new AppError(`Can't find ${req.originalUrl} on this server`, 400))
+// })
+
 
 
 

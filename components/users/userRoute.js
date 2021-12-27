@@ -1,7 +1,7 @@
 import express from "express";
 import multer from 'multer'
 import * as jwt from '../../auth/jwt.js'
-import checkDuplicateUsernameOrEmail from '../../auth/validateRegister.js'
+import checkDuplicateUsernameOrEmail from '../../middlewares/validateRegister.js'
 import {
   createUser,
   getAllUsers,
@@ -12,6 +12,7 @@ import {
   userProfile, emailVerify
 } 
   from "./userController.js"
+import checkUserStatus from "../../middlewares/userStatus.js";
 
 const route = express.Router();
 
@@ -34,9 +35,9 @@ route.get('/allUsers', getAllUsers);
 route.get('/profile', jwt.verifyToken, userProfile)
 route.post('/register',upload.single('image'), checkDuplicateUsernameOrEmail,createUser);
 route.get('/:id', getUserById);
-route.put('/edit/:id', updateUser);
+route.put('/edit/:id',upload.single('image'), updateUser);
 route.delete('/delete/:id', deleteUser)
-route.post('/login',  login);
+route.post('/login', checkUserStatus, login);
 route.patch('/verify-email', emailVerify);
 
 

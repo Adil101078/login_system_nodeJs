@@ -6,11 +6,11 @@ import {
     deleteService,
     userVerificationService
 } from './userService.js'
-import passport from 'passport'
 import crypto from 'crypto'
 import User from './userModel.js'
 import _ from 'lodash'
 import sendEmail from '../../utils/mailer.js'
+import AppError from '../../utils/appError.js'
 import dotenv from 'dotenv'
 dotenv.config()
 
@@ -27,18 +27,19 @@ const getUserById = async (req, res) => {
    return res.json(data)
 }
 const updateUser = async (req, res)=>{
-    const {fullname, username, email, password} = req.body
-    const {image} = req.path
-    const {id} = req.params
-    const data = await updateService(
-        id,
-        fullname,
-        username,
-        email,
-        password,
-        image
-    )
-    return res.json(data)
+    var userDets = { 
+        username:req.body.username,
+        fullname:req.body.fullname,
+        email:req.body.email,
+        password:req.body.password,
+        image:req.file.path
+       
+    }
+    const data = await updateService(req.params.id, userDets)
+     return res.status(301).json({
+        status: 'success',
+        data
+    })
 }
 
 const createUser =async (req, res) => {
@@ -52,7 +53,7 @@ const createUser =async (req, res) => {
    }
    
    const emailData = { 
-       reciever:req.body.email,
+       reciever:userObj.email,
        sender:process.env.SENDER_EMAIL,
        emailToken:userObj.emailToken,
        host:req.headers.host,
@@ -60,6 +61,7 @@ const createUser =async (req, res) => {
     }
   
    sendEmail(emailData)
+   console.log(emailData)
    const data = await createService(userObj)
    return res.status(201).json({
        success: true,
@@ -91,19 +93,36 @@ const emailVerify = async (req, res) => {
 
 const deleteUser = async (req, res) => {
     const data = await deleteService(req.params.id)
-    return res.status(201).json(data)
+    return res.status(301).json({
+        status: 'success',
+        data:{
+            data
+        }
+    })
 }
 
 
 const login = async (req, res, next) => {
-    passport.authenticate('local', (err, user, info) => {       
-       
-        if (err) return res.status(400).json(err);
-      
-        else if (user) return res.status(200).json({ "token": user.generateJwt(), message: "Login successful"});
-       
-        else return res.status(404).json(info);
-    })(req, res);
+    const {email, password} = req.body
+    if(!email || !password){
+       return next(new AppError('Please provide a email and password', 400))
+    }
+    const user = await User.findOne({email}).select('+password')
+ 
+    if(!user || !(await user.verifyPassword(password, user.password))){
+        return next(new AppError ('Incorrect email or password', 401))
+    }
+    // if(!user.emailToken)
+    // return  next(new AppError ('User not verified', 401))
+
+    
+
+
+    const token = user.generateJwt()
+    res.status(200).json({
+        status:'success',
+        token
+    })
 }
 const userProfile = (req, res, next) =>{
     User.findOne({id: req.id },
