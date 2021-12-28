@@ -1,53 +1,64 @@
-import { 
+import {
     getAllUsersService,
     deleteUserService,
 } from './adminServcie.js'
-import catchAsync from '../../utils/catchAsync.js'
 import User from '../users/userModel.js'
+import logger from '../../middlewares/logger.js'
+import { handler } from '../../helpers/responseHandler.js'
 
 
-const getAllUsers = catchAsync( async(req, res, next)=>{
-    const allUsers = await getAllUsersService()
-    res.status(200).json({
-        status:'success',
-        message: 'Fetched all users successfully',
-        allUsers
-    })
-})
+const getAllUsers = async (req, res, next) => {
+    logger.info('Inside getAllUser adminControllers')
+    try {
+        const data = await getAllUsersService()
+        return handler.handleResponse({ res, ...data })
+    } catch (error) {
+        return handler.handleError({ res, err, data: error })
+    }
 
-const deleteUser = catchAsync( async(req, res, next)=>{
-    const user = await deleteUserService(req.params.id)
-    res.status(203).json({
-        status:'success',
-        message: `User with ID: ${user._id} is deleted successfully`,
-        user
-    })
-})
 
-const disableUser = catchAsync( async(req, res, next)=>{
-    const user = await User.findOne({email:req.body.email})
-    user.status = 'inActive',
-    user.isVerified = false
-    await user.save()
-    res.status(201).json({
-        status: 'success',
-        message:'User is disabled',
-        user
-    })
-})
+}
 
-const enableUser = catchAsync( async(req, res, next)=>{
-    const user = await User.findOne({email: req.body.email})
-    user.status = 'active',
-    user.isVerified = true,
-    user.emailToken = null
-    await user.save()
-    res.status(200).json({
-        status: 'success',
-        message: 'User is enabled',
-        user
-    })
-})
+
+const deleteUser = async (req, res, next) => {
+    logger.info('Inside deleteUser adminControllers')
+    try {
+        const user = await deleteUserService(req.params.id)
+        return handler.handleResponse({ res, ...user })
+    } catch (error) {
+        return handler.handleError({ res, err, user: error })
+    }
+}
+
+const disableUser = async (req, res, next) => {
+    logger.info('Inside disable adminControllers')
+    try {
+        const { email } = req.body
+        const user = await User.findOne({ email })
+        user.status = 'inActive',
+        user.isVerified = false
+        await user.save()
+        return handler.handleResponse({ res, ...user})
+    } catch (error) {
+        return handler.handleError({ res, err, user: error })
+    }
+
+}
+
+const enableUser = async (req, res, next) => {
+    logger.info('Inside enableUser adminControllers')
+    try{
+        const { email } = req.body
+        const user = await User.findOne({ email })
+        user.status = 'active',
+        user.isVerified = true,
+        user.emailToken = null
+        await user.save()
+        return handler.handleResponse({ res, ...user})
+    }catch(error){
+        return handler.handleError({ res, err, user: error })
+    }
+}
 
 export {
     getAllUsers,

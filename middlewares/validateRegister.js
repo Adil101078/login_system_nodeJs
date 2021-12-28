@@ -1,37 +1,29 @@
 import User from '../components/users/userModel.js'
+import AppError from '../utils/appError.js';
+import logger from './logger.js'
+import {handler} from '../helpers/responseHandler.js';
 
-const checkDuplicateUsernameOrEmail = (req, res, next) => {
+
+const checkDuplicateUsernameOrEmail = async (req, res, next) => {
+  logger.info('Inside CheckDuplicateUsernameOrEmail Function')
   // Username
-  User.findOne({
-    username: req.body.username
-  }).exec((err, user) => {
-    if (err) {
-      res.status(500).send({ message: err });
-      return;
+  try{
+    const {username, email} = req.body
+    const userName = await User.findOne({username})
+    if(userName){
+      return next(new AppError(`Failed!, Userrname '${userName.username}' is already in use`))
     }
-
-    if (user) {
-      res.status(400).send({ message: "Failed! Username is already in use!" });
-      return;
-    }
-
-    // Email
-    User.findOne({
-      email: req.body.email
-    }).exec((err, user) => {
-      if (err) {
-        res.status(500).send({ message: err });
-        return;
-      }
-
-      if (user) {
-        res.status(400).send({ message: "Failed! Email is already in use!" });
-        return;
-      }
-
-      next();
-    });
-  });
+     // Email
+  const userEmail = await User.findOne({email})
+  if(userEmail){
+    return next(new AppError(`Failed!, Email '${userEmail.email}' is already registered`))
+  }
+  next()
+  }catch(error){
+    logger.error(error);
+    return handler.handleError({ res, error, data: error })
+  }
+  
 };
 
 
