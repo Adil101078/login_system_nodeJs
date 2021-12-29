@@ -12,7 +12,8 @@ const userSchema = new mongoose.Schema({
     emailToken:{type:String},
     isVerified:{type: Boolean, default:false},
     status:{type: String, default: 'active'},
-    role:{ type: String, default:'user', enum: ["admin", "user"]}
+    role:{ type: String, default:'user', enum: ["admin", "user"]},
+    phoneNumber: {type: String }
 });
 
 userSchema.pre('save', async function (next) {

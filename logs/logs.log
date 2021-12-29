@@ -131,3 +131,415 @@
 {"level":"info","message":"Connected to Database"}
 {"level":"info","message":"Server started at port:9000"}
 {"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser adminControllers"}
+{"level":"info","message":"Inside getAllUsers Service"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Inside getAllUser adminControllers"}
+{"level":"info","message":"Inside getAllUsers Service"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"date":"Wed Dec 29 2021 12:39:12 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\nReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/utils/sendOtp.js:5:16\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":51981},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18352818,"external":27203257,"heapTotal":57405440,"heapUsed":26403152,"rss":70381568},"pid":444,"uid":null,"version":"v16.13.0"},"stack":"ReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/utils/sendOtp.js:5:16\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":null,"file":null,"function":null,"line":null,"method":null,"native":false},{"column":16,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/utils/sendOtp.js","function":null,"line":5,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"date":"Wed Dec 29 2021 15:32:29 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: next is not a function\nTypeError: next is not a function\n    at verifyOtp (file:///D:/SoluLab/nodeJs/noedJsLoginSystem/utils/sendOtp.js:50:16)\n    at verifyLogin (file:///D:/SoluLab/nodeJs/noedJsLoginSystem/components/admin/adminController.js:91:5)\n    at Layer.handle [as handle_request] (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at Layer.handle [as handle_request] (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:281:22\n    at Function.process_params (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:335:12)\n    at next (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at Function.handle (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:174:3)","os":{"loadavg":[0,0,0],"uptime":62377},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18436618,"external":21680298,"heapTotal":42930176,"heapUsed":40196624,"rss":75816960},"pid":13464,"uid":null,"version":"v16.13.0"},"stack":"TypeError: next is not a function\n    at verifyOtp (file:///D:/SoluLab/nodeJs/noedJsLoginSystem/utils/sendOtp.js:50:16)\n    at verifyLogin (file:///D:/SoluLab/nodeJs/noedJsLoginSystem/components/admin/adminController.js:91:5)\n    at Layer.handle [as handle_request] (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at Layer.handle [as handle_request] (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:281:22\n    at Function.process_params (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:335:12)\n    at next (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at Function.handle (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:174:3)","trace":[{"column":16,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/utils/sendOtp.js","function":"verifyOtp","line":50,"method":null,"native":false},{"column":5,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/components/admin/adminController.js","function":"verifyLogin","line":91,"method":null,"native":false},{"column":5,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js","function":"Layer.handle [as handle_request]","line":95,"method":"handle [as handle_request]","native":false},{"column":13,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js","function":"next","line":137,"method":null,"native":false},{"column":3,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js","function":"Route.dispatch","line":112,"method":"dispatch","native":false},{"column":5,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js","function":"Layer.handle [as handle_request]","line":95,"method":"handle [as handle_request]","native":false},{"column":22,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js","function":null,"line":281,"method":null,"native":false},{"column":12,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js","function":"Function.process_params","line":335,"method":"process_params","native":false},{"column":10,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js","function":"next","line":275,"method":null,"native":false},{"column":3,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js","function":"Function.handle","line":174,"method":"handle","native":false}]}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"date":"Wed Dec 29 2021 15:58:21 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: otp is not defined\nReferenceError: otp is not defined\n    at verifyLogin (file:///D:/SoluLab/nodeJs/noedJsLoginSystem/components/admin/adminController.js:94:15)\n    at Layer.handle [as handle_request] (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at Layer.handle [as handle_request] (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:281:22\n    at Function.process_params (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:335:12)\n    at next (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at Function.handle (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:174:3)\n    at router (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:47:12)","os":{"loadavg":[0,0,0],"uptime":63929},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":19095640,"external":36177746,"heapTotal":71766016,"heapUsed":45882928,"rss":105058304},"pid":12340,"uid":null,"version":"v16.13.0"},"stack":"ReferenceError: otp is not defined\n    at verifyLogin (file:///D:/SoluLab/nodeJs/noedJsLoginSystem/components/admin/adminController.js:94:15)\n    at Layer.handle [as handle_request] (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at Layer.handle [as handle_request] (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:281:22\n    at Function.process_params (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:335:12)\n    at next (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at Function.handle (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:174:3)\n    at router (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:47:12)","trace":[{"column":15,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/components/admin/adminController.js","function":"verifyLogin","line":94,"method":null,"native":false},{"column":5,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js","function":"Layer.handle [as handle_request]","line":95,"method":"handle [as handle_request]","native":false},{"column":13,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js","function":"next","line":137,"method":null,"native":false},{"column":3,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js","function":"Route.dispatch","line":112,"method":"dispatch","native":false},{"column":5,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js","function":"Layer.handle [as handle_request]","line":95,"method":"handle [as handle_request]","native":false},{"column":22,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js","function":null,"line":281,"method":null,"native":false},{"column":12,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js","function":"Function.process_params","line":335,"method":"process_params","native":false},{"column":10,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js","function":"next","line":275,"method":null,"native":false},{"column":3,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js","function":"Function.handle","line":174,"method":"handle","native":false},{"column":12,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js","function":"router","line":47,"method":null,"native":false}]}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"code":20404,"level":"error","moreInfo":"https://www.twilio.com/docs/errors/20404","status":404}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"code":60221,"level":"error","moreInfo":"https://www.twilio.com/docs/errors/60221","status":400}
+{"code":60221,"level":"error","moreInfo":"https://www.twilio.com/docs/errors/60221","status":400}
+{"code":60221,"level":"error","moreInfo":"https://www.twilio.com/docs/errors/60221","status":400}
+{"code":20404,"level":"error","moreInfo":"https://www.twilio.com/docs/errors/20404","status":404}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside deleteUser Controller"}
+{"level":"info","message":"Inside deleteUser Service"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"info","message":"Inside createUser Servcie"}
+{"level":"info","message":"Inside emailVerify Controller"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error","message":"Missing required email and password fields","statusCode":404}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"error","message":"Email already exists","statusCode":401}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"error","message":"Email already exists","statusCode":401}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error","message":"Incorrect email or password","statusCode":401}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error","message":"Your account is inactive. Please contact administrator","statusCode":401}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error","message":"User must be an admin","statusCode":404}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"error","message":"Email already exists","statusCode":401}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser adminControllers"}
+{"level":"info","message":"Inside getAllUsers Service"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside deleteUser adminControllers"}
+{"level":"info","message":"Inside deleteUser Service"}
+{"level":"error"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside deleteUser adminControllers"}
+{"level":"info","message":"Inside deleteUser Service"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"info","message":"Inside createUser Servcie"}
+{"level":"info","message":"Inside deleteUser adminControllers"}
+{"level":"info","message":"Inside deleteUser Service"}
+{"level":"error"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside deleteUser adminControllers"}
+{"level":"info","message":"Inside deleteUser Service"}
+{"level":"error","message":"No records found","statusCode":404}
+{"level":"error"}
+{"level":"info","message":"Inside getAllUser adminControllers"}
+{"level":"info","message":"Inside getAllUsers Service"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser adminControllers"}
+{"level":"info","message":"Inside getAllUsers Service"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Inside deleteUser adminControllers"}
+{"level":"info","message":"Inside deleteUser Service"}
+{"level":"error","message":"No records found","statusCode":404}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error","message":"Incorrect email or password","statusCode":401}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error","message":"Incorrect email or password","statusCode":401}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error","message":"Incorrect email or password","statusCode":401}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"info","message":"Inside createUser Servcie"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error","message":"Your account is not verified","statusCode":401}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Inside deleteUser adminControllers"}
+{"level":"info","message":"Inside deleteUser Service"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error","message":"Incorrect email or password","statusCode":401}
+{"level":"error","message":"Token authentication failed","statusCode":500}
+{"level":"info","message":"Inside deleteUser adminControllers"}
+{"level":"info","message":"Inside deleteUser Service"}
+{"level":"error","message":"No records found","statusCode":404}
+{"level":"error"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"info","message":"Inside createUser Servcie"}
+{"level":"info","message":"Inside emailVerify Controller"}
+{"level":"error","message":"Token not valid","statusCode":422}
+{"level":"info","message":"Inside emailVerify Controller"}
+{"level":"error","message":"Token not valid","statusCode":422}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Inside emailVerify Controller"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error","message":"User must be an admin","statusCode":404}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+info: Dec-30-2021 01:15:04: Server started at port:9000
+info: Dec-30-2021 01:15:05: Connected to Database
+info: Dec-30-2021 01:16:29: Server started at port:9000
+info: Dec-30-2021 01:16:29: Connected to Database

@@ -10,6 +10,13 @@ const logger = winston.createLogger({
             json: true,
             maxsize: 5242880,
             maxFiles: 5,
+            format: winston.format.combine(
+               
+                winston.format.timestamp({
+                   format: 'MMM-DD-YYYY HH:mm:ss'
+               }),
+                winston.format.printf(info => `${info.level}: ${[info.timestamp]}: ${info.message}`),
+            ),
             colorize: true
         }),
         new winston.transports.Console({
@@ -17,7 +24,13 @@ const logger = winston.createLogger({
             handleExceptions: true,
             json: true,
             colorize: true,
-            timestamp: true
+            format: winston.format.combine(
+               
+                winston.format.timestamp({
+                   format: 'MMM-DD-YYYY HH:mm:ss'
+               }),
+                winston.format.printf(info => `${info.level}: ${[info.timestamp]}: ${info.message}`),
+            )
         })
     ],
     exceptionHandlers: [

@@ -1,18 +1,18 @@
 import User from '../users/userModel.js'
-import AppError from '../../utils/appError.js'
+import {ErrorHandler} from '../../helpers/globalHandler.js'
 import logger from '../../middlewares/logger.js'
 
 const getAllUsersService = async (next) => {
     logger.info('Inside getAllUsers Service')
     try {
         const users = await User.find()
-    if(!users){
-        return next(new AppError('No records found', 400))
-    }
-    return {data:users}
+        if(!users){
+        throw new ErrorHandler(404, 'No records found')
+        }
+        return {data:users}
     } catch (error) {
         logger.error(error)
-        return error
+        next(error)
     }
 }
 
@@ -21,22 +21,22 @@ const deleteUserService = async (id, next) => {
     try{
         const user = await User.findOneAndRemove(id)
         if(!user){
-            return next(new AppError('No records found', 400))
+            throw new ErrorHandler(404, 'No records found')
         }
-        return user
+        return {data:user}
 
     }catch(error) {
         logger.error(error)
-        return error
+        next(error)
     }
 }
 
-const disableUserService = async()=>{
+const disableUserService = async(next)=>{
     logger.info('Inside disableUser Service')
     try{
         const user = await User.findOne({email})
         if(!user){
-            return new AppError('No records found', 400)
+            throw new ErrorHandler(404, 'No records found')
         }
         user.status = 'inActive',
         user.isVerified = false
@@ -45,7 +45,7 @@ const disableUserService = async()=>{
 
     }catch(error) {
         logger.error(error)
-        return error
+        next(error)
     }
     
 }

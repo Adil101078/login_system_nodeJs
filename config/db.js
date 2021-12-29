@@ -7,8 +7,8 @@ const db = mongoose.connect(process.env.MONGODB_URL, {
     useUnifiedTopology: true
 }).then( () => {
     logger.info('Connected to Database')
-    }, (err) => {
-    logger.error(err.message)
+    }, (error) => {
+    logger.error(error)
    }
 );
 

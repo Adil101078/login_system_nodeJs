@@ -29,6 +29,7 @@
     "nodemon": "^2.0.15",
     "passport": "^0.5.0",
     "passport-local": "^1.0.0",
+    "twilio": "^3.72.0",
     "winston": "^3.3.3"
   }
 }
