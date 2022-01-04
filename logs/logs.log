@@ -1,0 +1,1125 @@
+{"level":"info","message":"Inside getAllUser adminControllers"}
+{"level":"info","message":"Inside getAllUser adminControllers"}
+{"date":"Tue Dec 28 2021 12:21:37 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\nReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:15:24\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":402306},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18400198,"external":24287983,"heapTotal":57143296,"heapUsed":25968968,"rss":69488640},"pid":8396,"uid":null,"version":"v16.13.0"},"stack":"ReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:15:24\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":null,"file":null,"function":null,"line":null,"method":null,"native":false},{"column":24,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js","function":null,"line":15,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"date":"Tue Dec 28 2021 12:22:38 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\nReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:15:24\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":402367},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18680174,"external":27184573,"heapTotal":39841792,"heapUsed":30007832,"rss":67973120},"pid":3292,"uid":null,"version":"v16.13.0"},"stack":"ReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:15:24\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":null,"file":null,"function":null,"line":null,"method":null,"native":false},{"column":24,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js","function":null,"line":15,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"date":"Tue Dec 28 2021 12:32:33 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\nReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:15:24\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":402961},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18634538,"external":27184573,"heapTotal":39579648,"heapUsed":29396008,"rss":68923392},"pid":5788,"uid":null,"version":"v16.13.0"},"stack":"ReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:15:24\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":null,"file":null,"function":null,"line":null,"method":null,"native":false},{"column":24,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js","function":null,"line":15,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"date":"Tue Dec 28 2021 12:33:21 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\nReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:15:24\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":403009},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18675977,"external":27184573,"heapTotal":39841792,"heapUsed":29764368,"rss":67792896},"pid":10472,"uid":null,"version":"v16.13.0"},"stack":"ReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:15:24\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":null,"file":null,"function":null,"line":null,"method":null,"native":false},{"column":24,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js","function":null,"line":15,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"date":"Tue Dec 28 2021 13:29:36 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/middlewares/logger.js:36:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":406384},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18715735,"external":27184615,"heapTotal":39841792,"heapUsed":30165520,"rss":67715072},"pid":12664,"uid":null,"version":"v16.13.0"},"stack":"ReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/middlewares/logger.js:36:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":null,"file":null,"function":null,"line":null,"method":null,"native":false},{"column":1,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/middlewares/logger.js","function":null,"line":36,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"date":"Tue Dec 28 2021 13:30:09 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: responseHelper is not defined\nReferenceError: responseHelper is not defined\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:38:9\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":406418},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18634705,"external":27184791,"heapTotal":39579648,"heapUsed":29914168,"rss":69279744},"pid":424,"uid":null,"version":"v16.13.0"},"stack":"ReferenceError: responseHelper is not defined\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:38:9\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":9,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js","function":null,"line":38,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"date":"Tue Dec 28 2021 13:36:59 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: responseHelper is not defined\nReferenceError: responseHelper is not defined\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:38:9\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":406827},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18680341,"external":21861318,"heapTotal":40103936,"heapUsed":30454504,"rss":68382720},"pid":3740,"uid":null,"version":"v16.13.0"},"stack":"ReferenceError: responseHelper is not defined\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:38:9\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":9,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js","function":null,"line":38,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"date":"Tue Dec 28 2021 13:39:08 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: app.use() requires a middleware function\nTypeError: app.use() requires a middleware function\n    at Function.use (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\application.js:210:11)\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:25:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":406956},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18591923,"external":22825122,"heapTotal":59240448,"heapUsed":28160896,"rss":69464064},"pid":10172,"uid":null,"version":"v16.13.0"},"stack":"TypeError: app.use() requires a middleware function\n    at Function.use (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\application.js:210:11)\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:25:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":11,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\application.js","function":"Function.use","line":210,"method":"use","native":false},{"column":5,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js","function":null,"line":25,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"date":"Tue Dec 28 2021 14:08:20 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: catchAsync is not defined\nReferenceError: catchAsync is not defined\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js:7:12\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":408708},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18319578,"external":25815350,"heapTotal":58454016,"heapUsed":25975280,"rss":70610944},"pid":6428,"uid":null,"version":"v16.13.0"},"stack":"ReferenceError: catchAsync is not defined\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js:7:12\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":12,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js","function":null,"line":7,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"date":"Tue Dec 28 2021 14:09:21 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: app.use() requires a middleware function\nTypeError: app.use() requires a middleware function\n    at Function.use (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\application.js:210:11)\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:38:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":408769},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18680341,"external":27192965,"heapTotal":40103936,"heapUsed":30559408,"rss":68132864},"pid":10104,"uid":null,"version":"v16.13.0"},"stack":"TypeError: app.use() requires a middleware function\n    at Function.use (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\application.js:210:11)\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:38:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":11,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\application.js","function":"Function.use","line":210,"method":"use","native":false},{"column":5,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js","function":null,"line":38,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"date":"Tue Dec 28 2021 14:12:53 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: app.use() requires a middleware function\nTypeError: app.use() requires a middleware function\n    at Function.use (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\application.js:210:11)\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:38:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":408981},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18680341,"external":27192965,"heapTotal":39841792,"heapUsed":30491640,"rss":67952640},"pid":12212,"uid":null,"version":"v16.13.0"},"stack":"TypeError: app.use() requires a middleware function\n    at Function.use (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\application.js:210:11)\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:38:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":11,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\application.js","function":"Function.use","line":210,"method":"use","native":false},{"column":5,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js","function":null,"line":38,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"date":"Tue Dec 28 2021 14:20:03 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: app.use() requires a middleware function\nTypeError: app.use() requires a middleware function\n    at Function.use (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\application.js:210:11)\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:38:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":409411},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18680341,"external":27192965,"heapTotal":40103936,"heapUsed":30571848,"rss":67792896},"pid":17644,"uid":null,"version":"v16.13.0"},"stack":"TypeError: app.use() requires a middleware function\n    at Function.use (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\application.js:210:11)\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:38:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":11,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\application.js","function":"Function.use","line":210,"method":"use","native":false},{"column":5,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js","function":null,"line":38,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"date":"Tue Dec 28 2021 14:25:20 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: app.use() requires a middleware function\nTypeError: app.use() requires a middleware function\n    at Function.use (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\application.js:210:11)\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:38:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":409728},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18680341,"external":27164494,"heapTotal":40103936,"heapUsed":30411528,"rss":68300800},"pid":7728,"uid":null,"version":"v16.13.0"},"stack":"TypeError: app.use() requires a middleware function\n    at Function.use (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\application.js:210:11)\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:38:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":11,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\application.js","function":"Function.use","line":210,"method":"use","native":false},{"column":5,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js","function":null,"line":38,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"date":"Tue Dec 28 2021 14:26:12 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: responseHelper is not defined\nReferenceError: responseHelper is not defined\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:24:9\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":409780},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18608779,"external":27183646,"heapTotal":39841792,"heapUsed":29373560,"rss":68919296},"pid":17056,"uid":null,"version":"v16.13.0"},"stack":"ReferenceError: responseHelper is not defined\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:24:9\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":9,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js","function":null,"line":24,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"date":"Tue Dec 28 2021 14:28:56 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: Cannot access 'config' before initialization\nReferenceError: Cannot access 'config' before initialization\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js:6:38\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":409944},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18479084,"external":25726595,"heapTotal":40366080,"heapUsed":27374248,"rss":69521408},"pid":3408,"uid":null,"version":"v16.13.0"},"stack":"ReferenceError: Cannot access 'config' before initialization\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js:6:38\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":38,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js","function":null,"line":6,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"date":"Tue Dec 28 2021 14:29:40 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: Cannot read properties of undefined (reading 'str')\nTypeError: Cannot read properties of undefined (reading 'str')\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js:6:48\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":409989},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18392006,"external":24287983,"heapTotal":57405440,"heapUsed":25910960,"rss":69808128},"pid":17108,"uid":null,"version":"v16.13.0"},"stack":"TypeError: Cannot read properties of undefined (reading 'str')\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js:6:48\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":48,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js","function":null,"line":6,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"date":"Tue Dec 28 2021 14:30:38 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: Cannot read properties of undefined (reading 'str')\nTypeError: Cannot read properties of undefined (reading 'str')\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js:6:48\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":410046},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18680174,"external":23164096,"heapTotal":39841792,"heapUsed":30038336,"rss":67874816},"pid":912,"uid":null,"version":"v16.13.0"},"stack":"TypeError: Cannot read properties of undefined (reading 'str')\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js:6:48\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":48,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js","function":null,"line":6,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"date":"Tue Dec 28 2021 14:32:37 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: db is not a function\nTypeError: db is not a function\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:16:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":410165},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18680341,"external":27187320,"heapTotal":40103936,"heapUsed":30494704,"rss":68014080},"pid":12620,"uid":null,"version":"v16.13.0"},"stack":"TypeError: db is not a function\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:16:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":1,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js","function":null,"line":16,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"date":"Tue Dec 28 2021 14:32:37 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: options auto_reconnect, usefindandmodify, usecreateindex are not supported\nMongoParseError: options auto_reconnect, usefindandmodify, usecreateindex are not supported\n    at Object.parseOptions (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongodb\\lib\\connection_string.js:291:15)\n    at new MongoClient (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongodb\\lib\\mongo_client.js:62:46)\n    at D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\connection.js:779:16\n    at new Promise (<anonymous>)\n    at NativeConnection.Connection.openUri (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\connection.js:776:19)\n    at Mongoose.createConnection (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\index.js:274:10)\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js:5:21\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)","os":{"loadavg":[0,0,0],"uptime":410165},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18688557,"external":27195576,"heapTotal":40103936,"heapUsed":30574408,"rss":68792320},"pid":12620,"uid":null,"version":"v16.13.0"},"stack":"MongoParseError: options auto_reconnect, usefindandmodify, usecreateindex are not supported\n    at Object.parseOptions (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongodb\\lib\\connection_string.js:291:15)\n    at new MongoClient (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongodb\\lib\\mongo_client.js:62:46)\n    at D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\connection.js:779:16\n    at new Promise (<anonymous>)\n    at NativeConnection.Connection.openUri (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\connection.js:776:19)\n    at Mongoose.createConnection (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\index.js:274:10)\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js:5:21\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)","trace":[{"column":15,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongodb\\lib\\connection_string.js","function":"Object.parseOptions","line":291,"method":"parseOptions","native":false},{"column":46,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongodb\\lib\\mongo_client.js","function":"new MongoClient","line":62,"method":null,"native":false},{"column":16,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\connection.js","function":null,"line":779,"method":null,"native":false},{"column":null,"file":null,"function":"new Promise","line":null,"method":null,"native":false},{"column":19,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\connection.js","function":"NativeConnection.Connection.openUri","line":776,"method":"openUri","native":false},{"column":10,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\index.js","function":"Mongoose.createConnection","line":274,"method":"createConnection","native":false},{"column":21,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js","function":null,"line":5,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false}]}
+{"date":"Tue Dec 28 2021 14:32:45 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: db is not a function\nTypeError: db is not a function\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:16:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":410174},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18680341,"external":27187320,"heapTotal":40103936,"heapUsed":30485024,"rss":67657728},"pid":10964,"uid":null,"version":"v16.13.0"},"stack":"TypeError: db is not a function\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:16:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":1,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js","function":null,"line":16,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"date":"Tue Dec 28 2021 14:32:45 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: options auto_reconnect, usefindandmodify, usecreateindex are not supported\nMongoParseError: options auto_reconnect, usefindandmodify, usecreateindex are not supported\n    at Object.parseOptions (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongodb\\lib\\connection_string.js:291:15)\n    at new MongoClient (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongodb\\lib\\mongo_client.js:62:46)\n    at D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\connection.js:779:16\n    at new Promise (<anonymous>)\n    at NativeConnection.Connection.openUri (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\connection.js:776:19)\n    at Mongoose.createConnection (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\index.js:274:10)\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js:5:21\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)","os":{"loadavg":[0,0,0],"uptime":410174},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18688557,"external":27195576,"heapTotal":40103936,"heapUsed":30564512,"rss":68423680},"pid":10964,"uid":null,"version":"v16.13.0"},"stack":"MongoParseError: options auto_reconnect, usefindandmodify, usecreateindex are not supported\n    at Object.parseOptions (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongodb\\lib\\connection_string.js:291:15)\n    at new MongoClient (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongodb\\lib\\mongo_client.js:62:46)\n    at D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\connection.js:779:16\n    at new Promise (<anonymous>)\n    at NativeConnection.Connection.openUri (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\connection.js:776:19)\n    at Mongoose.createConnection (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\index.js:274:10)\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js:5:21\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)","trace":[{"column":15,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongodb\\lib\\connection_string.js","function":"Object.parseOptions","line":291,"method":"parseOptions","native":false},{"column":46,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongodb\\lib\\mongo_client.js","function":"new MongoClient","line":62,"method":null,"native":false},{"column":16,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\connection.js","function":null,"line":779,"method":null,"native":false},{"column":null,"file":null,"function":"new Promise","line":null,"method":null,"native":false},{"column":19,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\connection.js","function":"NativeConnection.Connection.openUri","line":776,"method":"openUri","native":false},{"column":10,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\index.js","function":"Mongoose.createConnection","line":274,"method":"createConnection","native":false},{"column":21,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js","function":null,"line":5,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false}]}
+{"date":"Tue Dec 28 2021 14:34:33 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: options auto_reconnect, usefindandmodify, usecreateindex are not supported\nMongoParseError: options auto_reconnect, usefindandmodify, usecreateindex are not supported\n    at Object.parseOptions (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongodb\\lib\\connection_string.js:291:15)\n    at new MongoClient (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongodb\\lib\\mongo_client.js:62:46)\n    at D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\connection.js:779:16\n    at new Promise (<anonymous>)\n    at NativeConnection.Connection.openUri (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\connection.js:776:19)\n    at Mongoose.createConnection (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\index.js:274:10)\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js:5:21\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)","os":{"loadavg":[0,0,0],"uptime":410281},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18680341,"external":21916280,"heapTotal":40103936,"heapUsed":30660512,"rss":67940352},"pid":9856,"uid":null,"version":"v16.13.0"},"stack":"MongoParseError: options auto_reconnect, usefindandmodify, usecreateindex are not supported\n    at Object.parseOptions (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongodb\\lib\\connection_string.js:291:15)\n    at new MongoClient (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongodb\\lib\\mongo_client.js:62:46)\n    at D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\connection.js:779:16\n    at new Promise (<anonymous>)\n    at NativeConnection.Connection.openUri (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\connection.js:776:19)\n    at Mongoose.createConnection (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\index.js:274:10)\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js:5:21\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)","trace":[{"column":15,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongodb\\lib\\connection_string.js","function":"Object.parseOptions","line":291,"method":"parseOptions","native":false},{"column":46,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongodb\\lib\\mongo_client.js","function":"new MongoClient","line":62,"method":null,"native":false},{"column":16,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\connection.js","function":null,"line":779,"method":null,"native":false},{"column":null,"file":null,"function":"new Promise","line":null,"method":null,"native":false},{"column":19,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\connection.js","function":"NativeConnection.Connection.openUri","line":776,"method":"openUri","native":false},{"column":10,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\mongoose\\lib\\index.js","function":"Mongoose.createConnection","line":274,"method":"createConnection","native":false},{"column":21,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js","function":null,"line":5,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false}]}
+{"level":"info","message":"Mongoose connection open to master DB"}
+{"level":"info","message":"Inside getAllUser adminControllers"}
+{"level":"info","message":"Mongoose connection open to master DB"}
+{"level":"info","message":"Inside getAllUser adminControllers"}
+{"date":"Tue Dec 28 2021 14:37:04 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: db.on is not a function\nTypeError: db.on is not a function\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js:14:4\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":410432},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18400365,"external":24288150,"heapTotal":56881152,"heapUsed":26326184,"rss":69980160},"pid":17924,"uid":null,"version":"v16.13.0"},"stack":"TypeError: db.on is not a function\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js:14:4\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":4,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/config/db.js","function":null,"line":14,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"level":"info","message":"Mongoose connection open to master DB"}
+{"level":"info","message":"Mongoose connection open to master DB"}
+{"level":"info","message":"Inside getAllUser adminControllers"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser adminControllers"}
+{"date":"Tue Dec 28 2021 14:41:52 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: app.use() requires a middleware function\nTypeError: app.use() requires a middleware function\n    at Function.use (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\application.js:210:11)\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:18:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":410721},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18680341,"external":27184668,"heapTotal":40103936,"heapUsed":30451456,"rss":67977216},"pid":12580,"uid":null,"version":"v16.13.0"},"stack":"TypeError: app.use() requires a middleware function\n    at Function.use (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\application.js:210:11)\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:18:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":11,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\application.js","function":"Function.use","line":210,"method":"use","native":false},{"column":5,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js","function":null,"line":18,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"date":"Tue Dec 28 2021 14:42:03 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: db is not a function\nTypeError: db is not a function\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:18:9\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":410731},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18680341,"external":27184674,"heapTotal":40103936,"heapUsed":30572712,"rss":68227072},"pid":1184,"uid":null,"version":"v16.13.0"},"stack":"TypeError: db is not a function\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:18:9\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":9,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js","function":null,"line":18,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"level":"info","message":"Connected to Database"}
+{"date":"Tue Dec 28 2021 14:42:59 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: Cannot read properties of undefined (reading 'statusCode')\nTypeError: Cannot read properties of undefined (reading 'statusCode')\n    at globalErrorHandler (file:///D:/SoluLab/nodeJs/noedJsLoginSystem/helpers/globalErrorHandler.js:2:26)\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:23:9\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":410787},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18680341,"external":27184641,"heapTotal":40103936,"heapUsed":30366984,"rss":68280320},"pid":11376,"uid":null,"version":"v16.13.0"},"stack":"TypeError: Cannot read properties of undefined (reading 'statusCode')\n    at globalErrorHandler (file:///D:/SoluLab/nodeJs/noedJsLoginSystem/helpers/globalErrorHandler.js:2:26)\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:23:9\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":26,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/helpers/globalErrorHandler.js","function":"globalErrorHandler","line":2,"method":null,"native":false},{"column":9,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js","function":null,"line":23,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser adminControllers"}
+{"level":"info","message":"Connected to Database"}
+{"date":"Tue Dec 28 2021 15:04:26 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: catchAsync is not defined\nReferenceError: catchAsync is not defined\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/components/admin/adminController.js:28:20\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":412075},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18385043,"external":24287983,"heapTotal":57143296,"heapUsed":25817064,"rss":69853184},"pid":4292,"uid":null,"version":"v16.13.0"},"stack":"ReferenceError: catchAsync is not defined\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/components/admin/adminController.js:28:20\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":20,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/components/admin/adminController.js","function":null,"line":28,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser adminControllers"}
+{"date":"Tue Dec 28 2021 15:08:46 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: handler is not defined\nReferenceError: handler is not defined\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/helpers/responseHandler.js:3:24\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":412335},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18385043,"external":24287983,"heapTotal":56881152,"heapUsed":25781840,"rss":70164480},"pid":16712,"uid":null,"version":"v16.13.0"},"stack":"ReferenceError: handler is not defined\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/helpers/responseHandler.js:3:24\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":24,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/helpers/responseHandler.js","function":null,"line":3,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser adminControllers"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"error"}
+{"level":"info","message":"Inside getAllUser adminControllers"}
+{"level":"info","message":"Inside getAllUsers Service"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser adminControllers"}
+{"level":"info","message":"Inside getAllUsers Service"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"info","message":"Inside createUser Servcie"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Inside enableUser adminControllers"}
+{"level":"info","message":"Inside Login Controller"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside Login Controller"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside Login Controller"}
+{"level":"error"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside Login Controller"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside Login Controller"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside Login Controller"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside Login Controller"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside Login Controller"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside Login Controller"}
+{"level":"info","message":"Inside userProfile Controller"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside Login Controller"}
+{"level":"info","message":"Inside userProfile Controller"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userProfile Controller"}
+{"level":"info","message":"Inside userProfile Controller"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userProfile Controller"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside Login Controller"}
+{"level":"info","message":"Inside userProfile Controller"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside Login Controller"}
+{"level":"info","message":"Inside userProfile Controller"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Inside emailVerify Controller"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside emailVerify Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"date":"Tue Dec 28 2021 16:47:17 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/middlewares/logger.js:36:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":418246},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":50066,"external":3379042,"heapTotal":19247104,"heapUsed":10886408,"rss":42778624},"pid":18292,"uid":null,"version":"v16.13.0"},"stack":"ReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/middlewares/logger.js:36:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":null,"file":null,"function":null,"line":null,"method":null,"native":false},{"column":1,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/middlewares/logger.js","function":null,"line":36,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Inside CheckDuplicateUsernameOrEmail Function"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside CheckDuplicateUsernameOrEmail Function"}
+{"level":"info","message":"Inside CheckDuplicateUsernameOrEmail Function"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser adminControllers"}
+{"level":"info","message":"Inside getAllUsers Service"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Inside getAllUser adminControllers"}
+{"level":"info","message":"Inside getAllUsers Service"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"date":"Wed Dec 29 2021 12:39:12 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\nReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/utils/sendOtp.js:5:16\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","os":{"loadavg":[0,0,0],"uptime":51981},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18352818,"external":27203257,"heapTotal":57405440,"heapUsed":26403152,"rss":70381568},"pid":444,"uid":null,"version":"v16.13.0"},"stack":"ReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and 'D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/utils/sendOtp.js:5:16\n    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n    at async Promise.all (index 0)\n    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n    at async loadESM (node:internal/process/esm_loader:88:5)\n    at async handleMainPromise (node:internal/modules/run_main:65:12)","trace":[{"column":null,"file":null,"function":null,"line":null,"method":null,"native":false},{"column":16,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/utils/sendOtp.js","function":null,"line":5,"method":null,"native":false},{"column":25,"file":"node:internal/modules/esm/module_job","function":"ModuleJob.run","line":185,"method":"run","native":false},{"column":null,"file":null,"function":"async Promise.all","line":null,"method":"all","native":false},{"column":24,"file":"node:internal/modules/esm/loader","function":"async ESMLoader.import","line":281,"method":"import","native":false},{"column":5,"file":"node:internal/process/esm_loader","function":"async loadESM","line":88,"method":null,"native":false},{"column":12,"file":"node:internal/modules/run_main","function":"async handleMainPromise","line":65,"method":null,"native":false}]}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"date":"Wed Dec 29 2021 15:32:29 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: next is not a function\nTypeError: next is not a function\n    at verifyOtp (file:///D:/SoluLab/nodeJs/noedJsLoginSystem/utils/sendOtp.js:50:16)\n    at verifyLogin (file:///D:/SoluLab/nodeJs/noedJsLoginSystem/components/admin/adminController.js:91:5)\n    at Layer.handle [as handle_request] (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at Layer.handle [as handle_request] (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:281:22\n    at Function.process_params (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:335:12)\n    at next (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at Function.handle (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:174:3)","os":{"loadavg":[0,0,0],"uptime":62377},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18436618,"external":21680298,"heapTotal":42930176,"heapUsed":40196624,"rss":75816960},"pid":13464,"uid":null,"version":"v16.13.0"},"stack":"TypeError: next is not a function\n    at verifyOtp (file:///D:/SoluLab/nodeJs/noedJsLoginSystem/utils/sendOtp.js:50:16)\n    at verifyLogin (file:///D:/SoluLab/nodeJs/noedJsLoginSystem/components/admin/adminController.js:91:5)\n    at Layer.handle [as handle_request] (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at Layer.handle [as handle_request] (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:281:22\n    at Function.process_params (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:335:12)\n    at next (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at Function.handle (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:174:3)","trace":[{"column":16,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/utils/sendOtp.js","function":"verifyOtp","line":50,"method":null,"native":false},{"column":5,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/components/admin/adminController.js","function":"verifyLogin","line":91,"method":null,"native":false},{"column":5,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js","function":"Layer.handle [as handle_request]","line":95,"method":"handle [as handle_request]","native":false},{"column":13,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js","function":"next","line":137,"method":null,"native":false},{"column":3,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js","function":"Route.dispatch","line":112,"method":"dispatch","native":false},{"column":5,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js","function":"Layer.handle [as handle_request]","line":95,"method":"handle [as handle_request]","native":false},{"column":22,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js","function":null,"line":281,"method":null,"native":false},{"column":12,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js","function":"Function.process_params","line":335,"method":"process_params","native":false},{"column":10,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js","function":"next","line":275,"method":null,"native":false},{"column":3,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js","function":"Function.handle","line":174,"method":"handle","native":false}]}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"date":"Wed Dec 29 2021 15:58:21 GMT+0530 (India Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: otp is not defined\nReferenceError: otp is not defined\n    at verifyLogin (file:///D:/SoluLab/nodeJs/noedJsLoginSystem/components/admin/adminController.js:94:15)\n    at Layer.handle [as handle_request] (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at Layer.handle [as handle_request] (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:281:22\n    at Function.process_params (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:335:12)\n    at next (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at Function.handle (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:174:3)\n    at router (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:47:12)","os":{"loadavg":[0,0,0],"uptime":63929},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\server.js"],"cwd":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":19095640,"external":36177746,"heapTotal":71766016,"heapUsed":45882928,"rss":105058304},"pid":12340,"uid":null,"version":"v16.13.0"},"stack":"ReferenceError: otp is not defined\n    at verifyLogin (file:///D:/SoluLab/nodeJs/noedJsLoginSystem/components/admin/adminController.js:94:15)\n    at Layer.handle [as handle_request] (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at Layer.handle [as handle_request] (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:281:22\n    at Function.process_params (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:335:12)\n    at next (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at Function.handle (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:174:3)\n    at router (D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js:47:12)","trace":[{"column":15,"file":"file:///D:/SoluLab/nodeJs/noedJsLoginSystem/components/admin/adminController.js","function":"verifyLogin","line":94,"method":null,"native":false},{"column":5,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js","function":"Layer.handle [as handle_request]","line":95,"method":"handle [as handle_request]","native":false},{"column":13,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js","function":"next","line":137,"method":null,"native":false},{"column":3,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\route.js","function":"Route.dispatch","line":112,"method":"dispatch","native":false},{"column":5,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\layer.js","function":"Layer.handle [as handle_request]","line":95,"method":"handle [as handle_request]","native":false},{"column":22,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js","function":null,"line":281,"method":null,"native":false},{"column":12,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js","function":"Function.process_params","line":335,"method":"process_params","native":false},{"column":10,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js","function":"next","line":275,"method":null,"native":false},{"column":3,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js","function":"Function.handle","line":174,"method":"handle","native":false},{"column":12,"file":"D:\\SoluLab\\nodeJs\\noedJsLoginSystem\\node_modules\\express\\lib\\router\\index.js","function":"router","line":47,"method":null,"native":false}]}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"code":20404,"level":"error","moreInfo":"https://www.twilio.com/docs/errors/20404","status":404}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"code":60221,"level":"error","moreInfo":"https://www.twilio.com/docs/errors/60221","status":400}
+{"code":60221,"level":"error","moreInfo":"https://www.twilio.com/docs/errors/60221","status":400}
+{"code":60221,"level":"error","moreInfo":"https://www.twilio.com/docs/errors/60221","status":400}
+{"code":20404,"level":"error","moreInfo":"https://www.twilio.com/docs/errors/20404","status":404}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside deleteUser Controller"}
+{"level":"info","message":"Inside deleteUser Service"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"info","message":"Inside createUser Servcie"}
+{"level":"info","message":"Inside emailVerify Controller"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error","message":"Missing required email and password fields","statusCode":404}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"error","message":"Email already exists","statusCode":401}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"error","message":"Email already exists","statusCode":401}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error","message":"Incorrect email or password","statusCode":401}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error","message":"Your account is inactive. Please contact administrator","statusCode":401}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error","message":"User must be an admin","statusCode":404}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"error","message":"Email already exists","statusCode":401}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser adminControllers"}
+{"level":"info","message":"Inside getAllUsers Service"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside deleteUser adminControllers"}
+{"level":"info","message":"Inside deleteUser Service"}
+{"level":"error"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside deleteUser adminControllers"}
+{"level":"info","message":"Inside deleteUser Service"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"info","message":"Inside createUser Servcie"}
+{"level":"info","message":"Inside deleteUser adminControllers"}
+{"level":"info","message":"Inside deleteUser Service"}
+{"level":"error"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside deleteUser adminControllers"}
+{"level":"info","message":"Inside deleteUser Service"}
+{"level":"error","message":"No records found","statusCode":404}
+{"level":"error"}
+{"level":"info","message":"Inside getAllUser adminControllers"}
+{"level":"info","message":"Inside getAllUsers Service"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser adminControllers"}
+{"level":"info","message":"Inside getAllUsers Service"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Inside deleteUser adminControllers"}
+{"level":"info","message":"Inside deleteUser Service"}
+{"level":"error","message":"No records found","statusCode":404}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error","message":"Incorrect email or password","statusCode":401}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error","message":"Incorrect email or password","statusCode":401}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error","message":"Incorrect email or password","statusCode":401}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"info","message":"Inside createUser Servcie"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error","message":"Your account is not verified","statusCode":401}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Inside deleteUser adminControllers"}
+{"level":"info","message":"Inside deleteUser Service"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside userLogin Controller"}
+{"level":"error","message":"Incorrect email or password","statusCode":401}
+{"level":"error","message":"Token authentication failed","statusCode":500}
+{"level":"info","message":"Inside deleteUser adminControllers"}
+{"level":"info","message":"Inside deleteUser Service"}
+{"level":"error","message":"No records found","statusCode":404}
+{"level":"error"}
+{"level":"info","message":"Inside createuser Controller"}
+{"level":"info","message":"Inside createUser Servcie"}
+{"level":"info","message":"Inside emailVerify Controller"}
+{"level":"error","message":"Token not valid","statusCode":422}
+{"level":"info","message":"Inside emailVerify Controller"}
+{"level":"error","message":"Token not valid","statusCode":422}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Inside getAllUser controller"}
+{"level":"info","message":"Inside getAllusers Service"}
+{"level":"info","message":"Inside emailVerify Controller"}
+{"level":"info","message":"Inside adminLogin Controller"}
+{"level":"error","message":"User must be an admin","statusCode":404}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+{"level":"info","message":"Server started at port:9000"}
+{"level":"info","message":"Connected to Database"}
+info: Dec-30-2021 01:15:04: Server started at port:9000
+info: Dec-30-2021 01:15:05: Connected to Database
+info: Dec-30-2021 01:16:29: Server started at port:9000
+info: Dec-30-2021 01:16:29: Connected to Database
+info: Dec-30-2021 10:06:33: Server started at port:9000
+info: Dec-30-2021 10:06:34: Connected to Database
+info: Dec-30-2021 10:06:52: Inside getAllUser controller
+info: Dec-30-2021 10:06:52: Inside getAllusers Service
+info: Dec-30-2021 10:07:18: Inside disable adminControllers
+info: Dec-30-2021 10:07:24: Inside getAllUser adminControllers
+info: Dec-30-2021 10:07:24: Inside getAllUsers Service
+info: Dec-30-2021 10:11:28: Inside userLogin Controller
+error: Dec-30-2021 10:11:29: Your account is inactive. Please contact administrator
+info: Dec-30-2021 10:40:08: Server started at port:9000
+info: Dec-30-2021 10:40:09: Connected to Database
+info: Dec-30-2021 10:40:17: Inside getAllPost Controller
+info: Dec-30-2021 10:41:25: Server started at port:9000
+info: Dec-30-2021 10:41:26: Connected to Database
+info: Dec-30-2021 10:41:28: Inside getAllPost Controller
+info: Dec-30-2021 10:41:45: Server started at port:9000
+info: Dec-30-2021 10:41:45: Connected to Database
+info: Dec-30-2021 10:41:48: Inside getAllPost Controller
+info: Dec-30-2021 10:42:04: Server started at port:9000
+info: Dec-30-2021 10:42:05: Connected to Database
+info: Dec-30-2021 10:42:06: Inside getAllPost Controller
+info: Dec-30-2021 10:42:30: Server started at port:9000
+info: Dec-30-2021 10:42:30: Connected to Database
+info: Dec-30-2021 10:42:32: Inside getAllPost Controller
+info: Dec-30-2021 10:48:09: Server started at port:9000
+info: Dec-30-2021 10:48:10: Connected to Database
+info: Dec-30-2021 10:48:13: Inside getAllPost Controller
+info: Dec-30-2021 10:48:38: Server started at port:9000
+info: Dec-30-2021 10:48:38: Connected to Database
+info: Dec-30-2021 10:52:01: Server started at port:9000
+info: Dec-30-2021 10:52:02: Connected to Database
+info: Dec-30-2021 10:53:28: Inside createPost Controller
+info: Dec-30-2021 10:53:28: Inside createPost Service
+info: Dec-30-2021 10:54:01: Server started at port:9000
+info: Dec-30-2021 10:54:02: Connected to Database
+info: Dec-30-2021 10:54:03: Inside createPost Controller
+info: Dec-30-2021 10:54:03: Inside createPost Service
+info: Dec-30-2021 10:55:26: Server started at port:9000
+info: Dec-30-2021 10:55:27: Inside createPost Controller
+info: Dec-30-2021 10:55:27: Inside createPost Service
+info: Dec-30-2021 10:55:27: Connected to Database
+info: Dec-30-2021 10:56:23: Server started at port:9000
+info: Dec-30-2021 10:56:23: Connected to Database
+info: Dec-30-2021 10:56:24: Inside createPost Controller
+info: Dec-30-2021 10:56:24: Inside createPost Service
+info: Dec-30-2021 10:57:42: Server started at port:9000
+info: Dec-30-2021 10:57:42: Inside createPost Controller
+info: Dec-30-2021 10:57:42: Inside createPost Service
+info: Dec-30-2021 10:57:43: Connected to Database
+error: Dec-30-2021 10:57:43: undefined
+error: Dec-30-2021 10:57:43: undefined
+info: Dec-30-2021 10:59:30: Server started at port:9000
+info: Dec-30-2021 10:59:31: Connected to Database
+info: Dec-30-2021 10:59:33: Inside createPost Controller
+info: Dec-30-2021 10:59:33: Inside createPost Service
+info: Dec-30-2021 10:59:43: Inside getAllPost Controller
+info: Dec-30-2021 11:08:40: Server started at port:9000
+info: Dec-30-2021 11:08:40: Connected to Database
+info: Dec-30-2021 11:10:08: Server started at port:9000
+info: Dec-30-2021 11:10:09: Inside getAllPost Controller
+info: Dec-30-2021 11:10:09: Inside getAllPost Service
+info: Dec-30-2021 11:10:09: Connected to Database
+info: Dec-30-2021 12:11:54: Server started at port:9000
+info: Dec-30-2021 12:11:55: Connected to Database
+info: Dec-30-2021 12:12:30: Server started at port:9000
+info: Dec-30-2021 12:12:31: Connected to Database
+info: Dec-30-2021 12:13:24: Inside updatePost Controller
+info: Dec-30-2021 12:13:24: Inside updatePost Service
+info: Dec-30-2021 12:13:52: Server started at port:9000
+info: Dec-30-2021 12:13:52: Inside updatePost Controller
+info: Dec-30-2021 12:13:52: Inside updatePost Service
+info: Dec-30-2021 12:13:53: Connected to Database
+info: Dec-30-2021 12:29:34: Server started at port:9000
+info: Dec-30-2021 12:29:35: Connected to Database
+info: Dec-30-2021 12:30:40: Inside createuser Controller
+info: Dec-30-2021 12:30:40: Inside createUser Servcie
+info: Dec-30-2021 12:31:33: Inside adminLogin Controller
+error: Dec-30-2021 12:31:34: undefined
+error: Dec-30-2021 12:31:34: uncaughtException: next is not a function
+TypeError: next is not a function
+    at sendOTP (file:///D:/SoluLab/nodeJs/noedJsLoginSystem/utils/sendOtp.js:53:9)
+    at login (file:///D:/SoluLab/nodeJs/noedJsLoginSystem/components/admin/adminController.js:81:9)
+info: Dec-30-2021 12:32:37: Server started at port:9000
+info: Dec-30-2021 12:32:38: Connected to Database
+info: Dec-30-2021 12:33:10: Server started at port:9000
+info: Dec-30-2021 12:33:10: Connected to Database
+info: Dec-30-2021 12:33:14: Inside adminLogin Controller
+error: Dec-30-2021 12:33:14: undefined
+info: Dec-30-2021 12:33:59: Server started at port:9000
+info: Dec-30-2021 12:34:00: Connected to Database
+info: Dec-30-2021 12:34:00: Inside adminLogin Controller
+error: Dec-30-2021 12:34:01: undefined
+info: Dec-30-2021 12:42:27: Server started at port:9000
+info: Dec-30-2021 12:42:28: Connected to Database
+info: Dec-30-2021 12:42:47: Server started at port:9000
+info: Dec-30-2021 12:42:48: Connected to Database
+info: Dec-30-2021 12:43:10: Inside adminLogin Controller
+error: Dec-30-2021 12:43:11: undefined
+info: Dec-30-2021 12:44:52: Server started at port:9000
+info: Dec-30-2021 12:44:53: Connected to Database
+info: Dec-30-2021 12:44:55: Inside adminLogin Controller
+error: Dec-30-2021 12:44:56: undefined
+info: Dec-30-2021 12:48:48: Server started at port:9000
+info: Dec-30-2021 12:48:50: Inside adminLogin Controller
+info: Dec-30-2021 12:48:54: Connected to Database
+error: Dec-30-2021 12:48:57: undefined
+info: Dec-30-2021 12:50:51: Server started at port:9000
+info: Dec-30-2021 12:50:51: Connected to Database
+info: Dec-30-2021 12:50:54: Inside adminLogin Controller
+error: Dec-30-2021 12:50:56: undefined
+info: Dec-30-2021 12:51:28: Server started at port:9000
+info: Dec-30-2021 12:51:28: Connected to Database
+info: Dec-30-2021 12:51:31: Inside adminLogin Controller
+error: Dec-30-2021 12:51:33: undefined
+info: Dec-30-2021 12:54:45: Server started at port:9000
+info: Dec-30-2021 12:54:45: Connected to Database
+info: Dec-30-2021 12:54:50: Inside adminLogin Controller
+error: Dec-30-2021 12:54:52: undefined
+info: Dec-30-2021 12:56:06: Server started at port:9000
+info: Dec-30-2021 12:56:07: Inside adminLogin Controller
+info: Dec-30-2021 12:56:07: Connected to Database
+error: Dec-30-2021 12:56:10: uncaughtException: Authenticate
+Error: Authenticate
+    at success (D:\SoluLab\nodeJs\noedJsLoginSystem\node_modules\twilio\lib\base\Version.js:135:15)
+    at Promise_then_fulfilled (D:\SoluLab\nodeJs\noedJsLoginSystem\node_modules\q\q.js:766:44)
+    at Promise_done_fulfilled (D:\SoluLab\nodeJs\noedJsLoginSystem\node_modules\q\q.js:835:31)
+    at Fulfilled_dispatch [as dispatch] (D:\SoluLab\nodeJs\noedJsLoginSystem\node_modules\q\q.js:1229:9)
+    at Pending_become_eachMessage_task (D:\SoluLab\nodeJs\noedJsLoginSystem\node_modules\q\q.js:1369:30)
+    at RawTask.call (D:\SoluLab\nodeJs\noedJsLoginSystem\node_modules\asap\asap.js:40:19)
+    at flush (D:\SoluLab\nodeJs\noedJsLoginSystem\node_modules\asap\raw.js:50:29)
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+info: Dec-30-2021 12:56:37: Server started at port:9000
+info: Dec-30-2021 12:56:37: Connected to Database
+info: Dec-30-2021 12:56:39: Inside adminLogin Controller
+error: Dec-30-2021 12:56:41: undefined
+info: Dec-30-2021 12:56:54: Server started at port:9000
+info: Dec-30-2021 12:56:54: Connected to Database
+info: Dec-30-2021 12:57:10: Inside adminLogin Controller
+error: Dec-30-2021 12:57:13: uncaughtException: Authenticate
+Error: Authenticate
+    at success (D:\SoluLab\nodeJs\noedJsLoginSystem\node_modules\twilio\lib\base\Version.js:135:15)
+    at Promise_then_fulfilled (D:\SoluLab\nodeJs\noedJsLoginSystem\node_modules\q\q.js:766:44)
+    at Promise_done_fulfilled (D:\SoluLab\nodeJs\noedJsLoginSystem\node_modules\q\q.js:835:31)
+    at Fulfilled_dispatch [as dispatch] (D:\SoluLab\nodeJs\noedJsLoginSystem\node_modules\q\q.js:1229:9)
+    at Pending_become_eachMessage_task (D:\SoluLab\nodeJs\noedJsLoginSystem\node_modules\q\q.js:1369:30)
+    at RawTask.call (D:\SoluLab\nodeJs\noedJsLoginSystem\node_modules\asap\asap.js:40:19)
+    at flush (D:\SoluLab\nodeJs\noedJsLoginSystem\node_modules\asap\raw.js:50:29)
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+info: Dec-30-2021 12:58:14: Server started at port:9000
+info: Dec-30-2021 12:58:15: Connected to Database
+info: Dec-30-2021 12:58:19: Inside adminLogin Controller
+error: Dec-30-2021 12:58:21: uncaughtException: Authenticate
+Error: Authenticate
+    at success (D:\SoluLab\nodeJs\noedJsLoginSystem\node_modules\twilio\lib\base\Version.js:135:15)
+    at Promise_then_fulfilled (D:\SoluLab\nodeJs\noedJsLoginSystem\node_modules\q\q.js:766:44)
+    at Promise_done_fulfilled (D:\SoluLab\nodeJs\noedJsLoginSystem\node_modules\q\q.js:835:31)
+    at Fulfilled_dispatch [as dispatch] (D:\SoluLab\nodeJs\noedJsLoginSystem\node_modules\q\q.js:1229:9)
+    at Pending_become_eachMessage_task (D:\SoluLab\nodeJs\noedJsLoginSystem\node_modules\q\q.js:1369:30)
+    at RawTask.call (D:\SoluLab\nodeJs\noedJsLoginSystem\node_modules\asap\asap.js:40:19)
+    at flush (D:\SoluLab\nodeJs\noedJsLoginSystem\node_modules\asap\raw.js:50:29)
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+info: Dec-30-2021 12:59:09: Server started at port:9000
+info: Dec-30-2021 12:59:09: Connected to Database
+info: Dec-30-2021 12:59:14: Inside adminLogin Controller
+error: Dec-30-2021 12:59:17: undefined
+info: Dec-30-2021 12:59:36: Server started at port:9000
+info: Dec-30-2021 12:59:37: Connected to Database
+info: Dec-30-2021 12:59:38: Inside adminLogin Controller
+error: Dec-30-2021 12:59:40: undefined
+info: Dec-30-2021 13:00:48: Server started at port:9000
+info: Dec-30-2021 13:00:48: Connected to Database
+info: Dec-30-2021 13:00:53: Server started at port:9000
+info: Dec-30-2021 13:00:54: Connected to Database
+info: Dec-30-2021 13:00:56: Inside adminLogin Controller
+info: Dec-30-2021 13:04:41: Inside adminLogin Controller
+info: Dec-30-2021 13:16:34: Server started at port:9000
+info: Dec-30-2021 13:16:35: Connected to Database
+info: Dec-30-2021 13:16:37: Inside adminLogin Controller
+info: Dec-30-2021 13:16:40: [object Object]
+info: Dec-30-2021 13:17:05: Server started at port:9000
+info: Dec-30-2021 13:17:05: Connected to Database
+info: Dec-30-2021 13:17:18: Inside adminLogin Controller
+info: Dec-30-2021 13:25:30: Server started at port:9000
+info: Dec-30-2021 13:25:31: Connected to Database
+info: Dec-30-2021 13:25:34: Inside adminLogin Controller
+info: Dec-30-2021 13:25:51: Server started at port:9000
+info: Dec-30-2021 13:25:51: Connected to Database
+info: Dec-30-2021 13:26:16: Inside adminLogin Controller
+info: Dec-30-2021 13:29:26: Server started at port:9000
+info: Dec-30-2021 13:29:27: Connected to Database
+info: Dec-30-2021 13:29:31: Inside adminLogin Controller
+error: Dec-30-2021 13:29:33: undefined
+info: Dec-30-2021 13:30:10: Server started at port:9000
+info: Dec-30-2021 13:30:10: Connected to Database
+info: Dec-30-2021 13:30:12: Inside adminLogin Controller
+error: Dec-30-2021 13:30:14: undefined
+info: Dec-30-2021 13:31:29: Server started at port:9000
+info: Dec-30-2021 13:31:30: Connected to Database
+info: Dec-30-2021 13:31:32: Inside adminLogin Controller
+info: Dec-30-2021 13:41:23: Server started at port:9000
+info: Dec-30-2021 13:41:23: Connected to Database
+info: Dec-30-2021 13:41:34: Inside adminLogin Controller
+error: Dec-30-2021 13:41:35: undefined
+info: Dec-30-2021 13:42:33: Server started at port:9000
+info: Dec-30-2021 13:42:34: Connected to Database
+info: Dec-30-2021 13:42:38: Inside adminLogin Controller
+error: Dec-30-2021 13:42:40: undefined
+info: Dec-30-2021 13:43:02: Server started at port:9000
+info: Dec-30-2021 13:43:02: Connected to Database
+info: Dec-30-2021 13:43:04: Inside adminLogin Controller
+info: Dec-30-2021 13:43:39: Server started at port:9000
+info: Dec-30-2021 13:43:40: Connected to Database
+info: Dec-30-2021 13:43:47: Inside adminLogin Controller
+info: Dec-30-2021 13:44:30: Server started at port:9000
+info: Dec-30-2021 13:44:31: Connected to Database
+info: Dec-30-2021 13:44:32: Inside adminLogin Controller
+error: Dec-30-2021 13:44:34: undefined
+info: Dec-30-2021 13:44:54: Server started at port:9000
+info: Dec-30-2021 13:44:55: Connected to Database
+info: Dec-30-2021 13:44:57: Inside adminLogin Controller
+error: Dec-30-2021 13:44:58: undefined
+info: Dec-30-2021 13:45:22: Server started at port:9000
+info: Dec-30-2021 13:45:22: Connected to Database
+info: Dec-30-2021 13:45:28: Inside adminLogin Controller
+info: Dec-30-2021 13:48:12: Server started at port:9000
+info: Dec-30-2021 13:48:13: Connected to Database
+info: Dec-30-2021 13:48:18: Inside adminLogin Controller
+info: Dec-30-2021 13:51:26: Server started at port:9000
+info: Dec-30-2021 13:51:26: Connected to Database
+info: Dec-30-2021 13:52:15: Server started at port:9000
+info: Dec-30-2021 13:52:16: Connected to Database
+info: Dec-30-2021 13:52:49: Inside adminLogin Controller
+error: Dec-30-2021 13:53:27: Invalid OTP
+error: Dec-30-2021 13:53:51: Invalid OTP
+info: Dec-30-2021 13:53:58: Inside getAllUser adminControllers
+info: Dec-30-2021 13:53:58: Inside getAllUsers Service
+info: Dec-30-2021 13:55:49: Server started at port:9000
+info: Dec-30-2021 13:55:50: Connected to Database
+error: Dec-30-2021 13:55:59: Invalid OTP
+info: Dec-30-2021 13:56:23: Server started at port:9000
+info: Dec-30-2021 13:56:24: Connected to Database
+info: Dec-30-2021 13:58:40: Server started at port:9000
+info: Dec-30-2021 13:58:40: Connected to Database
+error: Dec-30-2021 14:00:20: undefined
+info: Dec-30-2021 14:01:15: Server started at port:9000
+info: Dec-30-2021 14:01:16: Connected to Database
+info: Dec-30-2021 14:08:24: Server started at port:9000
+info: Dec-30-2021 14:08:25: Connected to Database
+info: Dec-30-2021 14:08:43: Inside deletePost Controller
+info: Dec-30-2021 14:08:43: Inside deletePost Service
+info: Dec-30-2021 14:08:51: Inside createPost Controller
+info: Dec-30-2021 14:08:51: Inside createPost Service
+error: Dec-30-2021 15:34:16: uncaughtException: hbs is not a function
+TypeError: hbs is not a function
+    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:23:19
+    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)
+    at async Promise.all (index 0)
+    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)
+    at async loadESM (node:internal/process/esm_loader:88:5)
+    at async handleMainPromise (node:internal/modules/run_main:65:12)
+error: Dec-30-2021 15:35:13: uncaughtException: handlebars is not a function
+TypeError: handlebars is not a function
+    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:22:19
+    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)
+    at async Promise.all (index 0)
+    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)
+    at async loadESM (node:internal/process/esm_loader:88:5)
+    at async handleMainPromise (node:internal/modules/run_main:65:12)
+error: Dec-30-2021 15:36:14: uncaughtException: handlebars is not a function
+TypeError: handlebars is not a function
+    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:22:19
+    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)
+    at async Promise.all (index 0)
+    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)
+    at async loadESM (node:internal/process/esm_loader:88:5)
+    at async handleMainPromise (node:internal/modules/run_main:65:12)
+error: Dec-30-2021 15:37:10: uncaughtException: callback function required
+Error: callback function required
+    at Function.engine (D:\SoluLab\nodeJs\noedJsLoginSystem\node_modules\express\lib\application.js:295:11)
+    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:22:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)
+    at async Promise.all (index 0)
+    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)
+    at async loadESM (node:internal/process/esm_loader:88:5)
+    at async handleMainPromise (node:internal/modules/run_main:65:12)
+error: Dec-30-2021 15:41:14: uncaughtException: exphbs is not a function
+TypeError: exphbs is not a function
+    at file:///D:/SoluLab/nodeJs/noedJsLoginSystem/server.js:22:19
+    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)
+    at async Promise.all (index 0)
+    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)
+    at async loadESM (node:internal/process/esm_loader:88:5)
+    at async handleMainPromise (node:internal/modules/run_main:65:12)
+info: Dec-30-2021 15:43:51: Server started at port:9000
+info: Dec-30-2021 15:43:52: Connected to Database
+info: Dec-30-2021 15:44:34: Server started at port:9000
+info: Dec-30-2021 15:44:35: Connected to Database
+info: Dec-30-2021 15:44:38: Server started at port:9000
+info: Dec-30-2021 15:44:38: Connected to Database
+info: Dec-30-2021 15:44:43: Inside getAllUser adminControllers
+info: Dec-30-2021 15:44:43: Inside getAllUsers Service
+info: Dec-30-2021 15:45:01: Inside getAllUser adminControllers
+info: Dec-30-2021 15:45:01: Inside getAllUsers Service
+info: Dec-30-2021 15:45:46: Server started at port:9000
+info: Dec-30-2021 15:45:46: Connected to Database
+info: Dec-30-2021 15:45:54: Inside getAllUser adminControllers
+info: Dec-30-2021 15:45:54: Inside getAllUsers Service
+info: Dec-30-2021 15:46:19: Server started at port:9000
+info: Dec-30-2021 15:46:20: Connected to Database
+info: Dec-30-2021 15:46:22: Inside getAllUser adminControllers
+info: Dec-30-2021 15:46:22: Inside getAllUsers Service
+info: Dec-30-2021 15:47:07: Server started at port:9000
+info: Dec-30-2021 15:47:08: Connected to Database
+info: Dec-30-2021 15:47:08: Inside getAllUser adminControllers
+info: Dec-30-2021 15:47:08: Inside getAllUsers Service
+info: Dec-30-2021 15:47:35: Server started at port:9000
+info: Dec-30-2021 15:47:36: Connected to Database
+info: Dec-30-2021 15:47:37: Inside getAllUser adminControllers
+info: Dec-30-2021 15:47:37: Inside getAllUsers Service
+info: Dec-30-2021 15:47:47: Server started at port:9000
+info: Dec-30-2021 15:47:47: Inside getAllUser adminControllers
+info: Dec-30-2021 15:47:47: Inside getAllUsers Service
+info: Dec-30-2021 15:47:47: Connected to Database
+info: Dec-30-2021 15:48:06: Inside getAllUser adminControllers
+info: Dec-30-2021 15:48:06: Inside getAllUsers Service
+info: Dec-30-2021 15:48:28: Inside getAllUser adminControllers
+info: Dec-30-2021 15:48:28: Inside getAllUsers Service
+info: Dec-30-2021 15:48:58: Inside getAllUser adminControllers
+info: Dec-30-2021 15:48:58: Inside getAllUsers Service
+info: Dec-30-2021 15:49:27: Server started at port:9000
+info: Dec-30-2021 15:49:28: Connected to Database
+info: Dec-30-2021 15:49:30: Inside getAllUser adminControllers
+info: Dec-30-2021 15:49:30: Inside getAllUsers Service
+info: Dec-30-2021 15:51:43: Inside getAllUser adminControllers
+info: Dec-30-2021 15:51:43: Inside getAllUsers Service
+info: Dec-30-2021 15:52:27: Inside getAllUser adminControllers
+info: Dec-30-2021 15:52:27: Inside getAllUsers Service
+info: Dec-30-2021 15:53:15: Inside getAllUser adminControllers
+info: Dec-30-2021 15:53:15: Inside getAllUsers Service
+info: Dec-30-2021 15:53:51: Inside getAllUser adminControllers
+info: Dec-30-2021 15:53:51: Inside getAllUsers Service
+info: Dec-30-2021 15:54:00: Inside getAllUser adminControllers
+info: Dec-30-2021 15:54:00: Inside getAllUsers Service
+info: Dec-30-2021 16:00:19: Server started at port:9000
+info: Dec-30-2021 16:00:20: Connected to Database
+info: Dec-30-2021 16:00:24: Inside getAllUser adminControllers
+info: Dec-30-2021 16:00:24: Inside getAllUsers Service
+info: Dec-30-2021 16:03:24: Inside getAllUser adminControllers
+info: Dec-30-2021 16:03:24: Inside getAllUsers Service
+info: Dec-30-2021 16:03:51: Inside getAllUser adminControllers
+info: Dec-30-2021 16:03:51: Inside getAllUsers Service
+info: Dec-30-2021 16:05:12: Inside getAllUser adminControllers
+info: Dec-30-2021 16:05:12: Inside getAllUsers Service
+info: Dec-30-2021 16:07:18: Inside getAllUser adminControllers
+info: Dec-30-2021 16:07:18: Inside getAllUsers Service
+info: Dec-30-2021 16:07:55: Server started at port:9000
+info: Dec-30-2021 16:07:56: Connected to Database
+info: Dec-30-2021 16:07:57: Inside getAllUser adminControllers
+info: Dec-30-2021 16:07:57: Inside getAllUsers Service
+info: Dec-30-2021 16:08:06: Inside getAllUser adminControllers
+info: Dec-30-2021 16:08:06: Inside getAllUsers Service
+info: Dec-30-2021 16:08:33: Server started at port:9000
+info: Dec-30-2021 16:08:34: Connected to Database
+info: Dec-30-2021 16:08:37: Inside getAllUser adminControllers
+info: Dec-30-2021 16:08:37: Inside getAllUsers Service
+info: Dec-30-2021 16:11:36: Server started at port:9000
+info: Dec-30-2021 16:11:37: Connected to Database
+info: Dec-30-2021 16:11:40: Inside getAllUser adminControllers
+info: Dec-30-2021 16:11:40: Inside getAllUsers Service
+info: Dec-30-2021 16:12:02: Server started at port:9000
+info: Dec-30-2021 16:12:03: Connected to Database
+info: Dec-30-2021 16:12:08: Inside getAllUser adminControllers
+info: Dec-30-2021 16:12:08: Inside getAllUsers Service
+info: Dec-30-2021 16:12:43: Server started at port:9000
+info: Dec-30-2021 16:12:43: Connected to Database
+info: Dec-30-2021 16:12:46: Inside getAllUser adminControllers
+info: Dec-30-2021 16:12:46: Inside getAllUsers Service
+info: Dec-30-2021 16:18:39: Inside getAllUser adminControllers
+info: Dec-30-2021 16:18:39: Inside getAllUsers Service
+info: Dec-30-2021 16:19:05: Inside getAllUser adminControllers
+info: Dec-30-2021 16:19:05: Inside getAllUsers Service
+info: Dec-30-2021 16:19:36: Inside getAllUser adminControllers
+info: Dec-30-2021 16:19:36: Inside getAllUsers Service
+info: Dec-30-2021 16:21:08: Inside getAllUser adminControllers
+info: Dec-30-2021 16:21:08: Inside getAllUsers Service
+info: Dec-30-2021 16:21:54: Inside getAllUser adminControllers
+info: Dec-30-2021 16:21:54: Inside getAllUsers Service
+info: Dec-30-2021 16:23:29: Inside getAllUser adminControllers
+info: Dec-30-2021 16:23:29: Inside getAllUsers Service
+info: Dec-30-2021 16:27:12: Inside getAllUser adminControllers
+info: Dec-30-2021 16:27:12: Inside getAllUsers Service
+info: Dec-30-2021 16:29:56: Inside getAllUser adminControllers
+info: Dec-30-2021 16:29:56: Inside getAllUsers Service
+info: Dec-30-2021 16:30:43: Inside getAllUser adminControllers
+info: Dec-30-2021 16:30:43: Inside getAllUsers Service
+info: Dec-30-2021 16:37:15: Server started at port:9000
+info: Dec-30-2021 16:37:16: Connected to Database
+info: Dec-30-2021 16:37:19: Server started at port:9000
+info: Dec-30-2021 16:37:20: Connected to Database
+info: Dec-30-2021 16:37:25: Inside getAllUser adminControllers
+info: Dec-30-2021 16:37:25: Inside getAllUsers Service
+info: Dec-30-2021 16:39:32: Inside getAllUser adminControllers
+info: Dec-30-2021 16:39:32: Inside getAllUsers Service
+info: Dec-30-2021 16:41:29: Inside getAllUser controller
+info: Dec-30-2021 16:41:29: Inside getAllusers Service
+info: Dec-30-2021 16:42:08: Server started at port:9000
+info: Dec-30-2021 16:42:09: Connected to Database
+info: Dec-30-2021 16:42:11: Inside getAllUser adminControllers
+info: Dec-30-2021 16:42:11: Inside getAllUsers Service
+info: Dec-30-2021 16:42:19: Inside getAllUser adminControllers
+info: Dec-30-2021 16:42:19: Inside getAllUsers Service
+info: Dec-30-2021 16:42:37: Inside getAllUser adminControllers
+info: Dec-30-2021 16:42:37: Inside getAllUsers Service
+info: Dec-30-2021 16:44:45: Inside getAllUser adminControllers
+info: Dec-30-2021 16:44:45: Inside getAllUsers Service
+info: Dec-30-2021 16:45:08: Inside getAllUser adminControllers
+info: Dec-30-2021 16:45:08: Inside getAllUsers Service
+info: Dec-30-2021 16:45:11: Inside getAllUser adminControllers
+info: Dec-30-2021 16:45:11: Inside getAllUsers Service
+info: Dec-30-2021 16:45:33: Server started at port:9000
+info: Dec-30-2021 16:45:33: Connected to Database
+info: Dec-30-2021 16:45:37: Inside getAllUser adminControllers
+info: Dec-30-2021 16:45:37: Inside getAllUsers Service
+info: Dec-30-2021 16:47:37: Inside getAllUser adminControllers
+info: Dec-30-2021 16:47:37: Inside getAllUsers Service
+info: Dec-30-2021 16:48:12: Inside getAllUser adminControllers
+info: Dec-30-2021 16:48:12: Inside getAllUsers Service
+info: Dec-30-2021 16:51:27: Inside getAllUser adminControllers
+info: Dec-30-2021 16:51:27: Inside getAllUsers Service
+info: Dec-30-2021 16:59:44: Inside adminLogin Controller
+info: Dec-30-2021 17:00:02: Inside adminLogin Controller
+error: Dec-30-2021 17:00:02: Please provide email and password
+info: Dec-30-2021 17:00:47: Server started at port:9000
+info: Dec-30-2021 17:00:47: Inside adminLogin Controller
+error: Dec-30-2021 17:00:47: Please provide email and password
+info: Dec-30-2021 17:00:47: Connected to Database
+info: Dec-30-2021 17:00:57: Inside adminLogin Controller
+info: Dec-30-2021 17:01:10: Inside adminLogin Controller
+error: Dec-30-2021 17:01:10: Incorrect email or password
+info: Dec-30-2021 17:01:25: Server started at port:9000
+info: Dec-30-2021 17:01:25: Connected to Database
+info: Dec-30-2021 17:01:29: Inside adminLogin Controller
+error: Dec-30-2021 17:01:29: Please provide email and password
+info: Dec-30-2021 17:01:44: Inside adminLogin Controller
+error: Dec-30-2021 17:01:45: Incorrect email or password
+info: Dec-30-2021 17:01:55: Inside adminLogin Controller
+error: Dec-30-2021 17:04:02: undefined
+error: Dec-30-2021 17:04:50: undefined
+info: Dec-30-2021 17:05:55: Inside getAllUser adminControllers
+info: Dec-30-2021 17:05:55: Inside getAllUsers Service
+info: Dec-30-2021 17:06:18: Inside getAllUser adminControllers
+info: Dec-30-2021 17:06:18: Inside getAllUsers Service
+info: Dec-30-2021 17:17:57: Inside getAllUser adminControllers
+info: Dec-30-2021 17:17:57: Inside getAllUsers Service
+info: Dec-30-2021 17:18:01: Inside getAllUser adminControllers
+info: Dec-30-2021 17:18:01: Inside getAllUsers Service
+info: Dec-30-2021 17:18:02: Inside getAllUser adminControllers
+info: Dec-30-2021 17:18:02: Inside getAllUsers Service
+info: Dec-30-2021 17:18:03: Inside getAllUser adminControllers
+info: Dec-30-2021 17:18:03: Inside getAllUsers Service
+info: Dec-30-2021 17:18:26: Inside getAllUser adminControllers
+info: Dec-30-2021 17:18:26: Inside getAllUsers Service
+info: Dec-30-2021 17:19:08: Inside getAllUser adminControllers
+info: Dec-30-2021 17:19:08: Inside getAllUsers Service
+info: Dec-30-2021 17:19:11: Inside getAllUser adminControllers
+info: Dec-30-2021 17:19:11: Inside getAllUsers Service
+info: Dec-30-2021 17:19:22: Inside getAllUser adminControllers
+info: Dec-30-2021 17:19:22: Inside getAllUsers Service
+info: Dec-30-2021 17:26:28: Server started at port:9000
+info: Dec-30-2021 17:26:29: Connected to Database
+info: Dec-30-2021 17:27:09: Inside createuser Controller
+error: Dec-30-2021 17:27:09: undefined
+info: Dec-30-2021 17:27:37: Inside createuser Controller
+error: Dec-30-2021 17:27:37: Email already exists
+info: Dec-30-2021 17:27:58: Inside createuser Controller
+error: Dec-30-2021 17:27:58: undefined
+info: Dec-30-2021 17:29:15: Server started at port:9000
+info: Dec-30-2021 17:29:16: Connected to Database
+info: Dec-30-2021 17:29:18: Inside createuser Controller
+error: Dec-30-2021 17:29:18: undefined
+info: Dec-30-2021 18:48:31: Inside getAllUser adminControllers
+info: Dec-30-2021 18:48:31: Inside getAllUsers Service
+info: Dec-30-2021 18:51:56: Server started at port:9000
+info: Dec-30-2021 18:51:56: Connected to Database
+info: Dec-30-2021 23:38:08: Server started at port:9000
+info: Dec-30-2021 23:38:09: Connected to Database
+info: Dec-30-2021 23:39:24: Inside getAllUser controller
+info: Dec-30-2021 23:39:24: Inside getAllusers Service
+info: Dec-30-2021 23:39:38: Inside getUserById Controller
+info: Dec-30-2021 23:39:38: Inside getUserById Service
+info: Dec-30-2021 23:39:44: Inside getUserById Controller
+info: Dec-30-2021 23:39:44: Inside getUserById Service
+error: Dec-30-2021 23:39:44: undefined
+error: Dec-30-2021 23:39:44: undefined
+info: Dec-30-2021 23:40:25: Server started at port:9000
+info: Dec-30-2021 23:40:26: Connected to Database
+info: Dec-30-2021 23:40:27: Inside getUserById Controller
+info: Dec-30-2021 23:40:27: Inside getUserById Service
+error: Dec-30-2021 23:40:27: undefined
+error: Dec-30-2021 23:40:27: undefined
+info: Dec-30-2021 23:42:12: Server started at port:9000
+info: Dec-30-2021 23:42:12: Connected to Database
+info: Dec-30-2021 23:42:20: Inside getUserById Controller
+info: Dec-30-2021 23:42:20: Inside getUserById Service
+error: Dec-30-2021 23:42:20: undefined
+error: Dec-30-2021 23:42:20: undefined
+info: Dec-30-2021 23:44:00: Server started at port:9000
+info: Dec-30-2021 23:44:01: Connected to Database
+info: Dec-30-2021 23:44:05: Inside getUserById Controller
+info: Dec-30-2021 23:44:05: Inside getUserById Service
+error: Dec-30-2021 23:44:05: undefined
+error: Dec-30-2021 23:44:05: undefined
+info: Dec-30-2021 23:45:22: Server started at port:9000
+info: Dec-30-2021 23:45:23: Connected to Database
+info: Dec-30-2021 23:45:24: Inside getUserById Controller
+info: Dec-30-2021 23:45:24: Inside getUserById Service
+error: Dec-30-2021 23:45:24: undefined
+error: Dec-30-2021 23:45:24: undefined
+info: Dec-30-2021 23:45:43: Inside getUserById Controller
+info: Dec-30-2021 23:45:43: Inside getUserById Service
+info: Dec-30-2021 23:45:55: Inside getUserById Controller
+info: Dec-30-2021 23:45:55: Inside getUserById Service
+error: Dec-30-2021 23:45:55: undefined
+error: Dec-30-2021 23:45:55: undefined
+info: Dec-30-2021 23:46:55: Server started at port:9000
+info: Dec-30-2021 23:46:56: Connected to Database
+info: Dec-30-2021 23:46:57: Inside getUserById Controller
+info: Dec-30-2021 23:46:57: Inside getUserById Service
+error: Dec-30-2021 23:46:57: undefined
+error: Dec-30-2021 23:46:57: undefined
+info: Dec-30-2021 23:48:35: Server started at port:9000
+info: Dec-30-2021 23:48:36: Connected to Database
+info: Dec-30-2021 23:48:39: Inside getUserById Controller
+info: Dec-30-2021 23:48:39: Inside getUserById Service
+error: Dec-30-2021 23:48:39: undefined
+error: Dec-30-2021 23:48:39: undefined
+info: Dec-30-2021 23:49:28: Server started at port:9000
+info: Dec-30-2021 23:49:29: Connected to Database
+info: Dec-30-2021 23:49:30: Inside getUserById Controller
+info: Dec-30-2021 23:49:30: Inside getUserById Service
+error: Dec-30-2021 23:49:30: undefined
+error: Dec-30-2021 23:49:30: undefined
+info: Dec-30-2021 23:53:01: Server started at port:9000
+info: Dec-30-2021 23:53:02: Connected to Database
+info: Dec-30-2021 23:53:07: Server started at port:9000
+info: Dec-30-2021 23:53:08: Connected to Database
+info: Dec-30-2021 23:53:48: Inside getUserById Controller
+info: Dec-30-2021 23:53:48: Inside getUserById Service
+error: Dec-30-2021 23:53:48: undefined
+error: Dec-30-2021 23:53:48: undefined
+info: Dec-30-2021 23:53:57: Inside getUserById Controller
+info: Dec-30-2021 23:53:57: Inside getUserById Service
+error: Dec-30-2021 23:53:57: undefined
+error: Dec-30-2021 23:53:57: undefined
+info: Dec-30-2021 23:54:24: Server started at port:9000
+info: Dec-30-2021 23:54:25: Connected to Database
+info: Dec-30-2021 23:55:46: Server started at port:9000
+info: Dec-30-2021 23:55:46: Connected to Database
+info: Dec-30-2021 23:56:16: Inside getUserById Controller
+info: Dec-30-2021 23:56:16: Inside getUserById Service
+error: Dec-30-2021 23:56:16: undefined
+error: Dec-30-2021 23:56:16: undefined
+info: Dec-30-2021 23:56:57: Server started at port:9000
+info: Dec-30-2021 23:56:57: Connected to Database
+info: Dec-30-2021 23:56:58: Inside getUserById Controller
+info: Dec-30-2021 23:56:58: Inside getUserById Service
+error: Dec-30-2021 23:56:58: undefined
+info: Dec-30-2021 23:58:51: Server started at port:9000
+info: Dec-30-2021 23:58:52: Connected to Database
+info: Dec-30-2021 23:58:53: Inside getUserById Controller
+info: Dec-30-2021 23:58:53: Inside getUserById Service
+error: Dec-30-2021 23:58:53: undefined
+info: Jan-01-2022 11:22:36: Server started at port:9000
+info: Jan-01-2022 11:22:36: Connected to Database
+info: Jan-01-2022 11:22:50: Inside getAllUser controller
+info: Jan-01-2022 11:22:50: Inside getAllusers Service
+info: Jan-01-2022 11:23:03: Server started at port:9000
+info: Jan-01-2022 11:23:03: Connected to Database
+info: Jan-01-2022 11:23:07: Inside getAllUser controller
+info: Jan-01-2022 11:23:07: Inside getAllusers Service

@@ -5,27 +5,26 @@ import jwt from 'jsonwebtoken';
 
 const userSchema = new mongoose.Schema({
     username:{ type: String },
-    email:{type: String },
+    email:{type: String, required: true},
     fullname:{type: String },
-    password:{type: String },
-    image:{type: String},
-    posts:[{ 
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Post'
-    }]
+    password:{type: String, required: true},
+    image:{type: String, default:null},
+    emailToken:{type:String},
+    isVerified:{type: Boolean, default:false},
+    status:{type: String, default: 'active'},
+    role:{ type: String, default:'user', enum: ["admin", "user"]},
+    phoneNumber: {type: String },
+    otp: {type: Number, default:null}
 });
 
-userSchema.pre('save', function (next) {
-    bcrypt.genSalt(10, (err, salt) => {
-        bcrypt.hash(this.password, salt, (err, hash) => {
-            this.password = hash;
-            this.saltSecret = salt;
-            next();
-        });
-    });
+userSchema.pre('save', async function (next) {
+    if(!this.isModified('password')) return next();
+    this.password = await bcrypt.hash(this.password, 12)
+    next();
 });
-userSchema.methods.verifyPassword = function (password) {
-     return bcrypt.compareSync(password, this.password);
+userSchema.methods.verifyPassword = async function (candidatePassword, userPassword) {
+     return await bcrypt.compare(candidatePassword, userPassword);
+
     };
     
 userSchema.methods.generateJwt = function () {

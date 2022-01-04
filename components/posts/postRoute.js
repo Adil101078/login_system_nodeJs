@@ -4,16 +4,19 @@ import {
     getAllPosts,
     getPostById,
     updatePost,
-    deletePost
+    deletePost,
+    likePostController
 } from "./postController.js";
+import verifyToken from "../../auth/jwt.js";
 
 const postRoute = express.Router();
 
 postRoute.get('/allPosts', getAllPosts);
 postRoute.get('/:id', getPostById)
 postRoute.put('/edit/:id', updatePost);
-postRoute.post('/addPost', createPost);
+postRoute.post('/addPost',verifyToken, createPost);
 postRoute.delete('/delete/:id', deletePost);
+postRoute.patch('/likePost/:id', likePostController);
 
 
 

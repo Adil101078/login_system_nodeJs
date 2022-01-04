@@ -1,50 +1,71 @@
 import User from  './userModel.js'
-import mongoose from 'mongoose'
+import logger from '../../middlewares/logger.js'
+import { ErrorHandler } from '../../helpers/globalHandler.js'
 
-const createService = async (userObj)=>{
-     const result = await User.create(userObj)
+const createService = async (data, next)=>{
+  logger.info('Inside createUser Servcie')
+  try {
+    const result = await User.create(data)
     return {data:result}
+  } catch (error) {
+    logger.error(error)
+       next(error)
   }
-const getAllUsersService = async()=>{
-  const result = await User.find().populate({ path:'posts', model:'Post'})
-  return {data:result}
+    
+  }
+const getAllUsersService = async(next)=>{
+  logger.info('Inside getAllusers Service')
+  try{
+    const data = await User.find({})
+    return {data:data}
+
+  }catch(error){
+    logger.error(error)
+    next(error)
+  }
 }
 
 const getUserByIdService = async(id)=>{
-  const result = await User.findById(id).populate('posts')
-  return {data:result}
+  logger.info('Inside getUserById Service')
+  try{
+    
+      const result = await User.findById(id)
+        if(result)
+         return result
+    
+      throw new ErrorHandler(404, 'No user found by given Id')
+
+  }catch(error){
+    logger.error(error)
+     throw new Error(error)
+  }
 }
-const deleteService = async(id)=>{
-  const result = await User.findByIdAndRemove(id)
-  return {data:result}
+const deleteService = async(id, next)=>{
+  logger.info('Inside deleteUser Service')
+  try{
+    const result = await User.findByIdAndRemove(id)
+    if(!result)
+      throw new ErrorHandler(404, 'user record not found')
+    return {data:result}
+
+  }catch(error) {
+    logger.error(error)
+    next(error)
+  }
 }
-const updateService = async(id,fullname, username, email, password, image)=>{
-  const userDetails = await User.findOneAndUpdate(
-      {
-    _id: mongoose.Types.ObjectId(id),
-  },
-        {
-    $set: {
-      ...(fullname && {
-        fullname,
-      }),
-      ...(username && {
-        username,
-      }),
-      ...(email && {
-        email,
-      }),
-      ...(password && {
-        password,
-      }),
-      ...(image && {
-        image,
-      })
-    },
-  },
-  { new: true }
-  )
-  return {data:userDetails}
+const updateService = async(id, obj, next)=>{
+  logger.info('Inside updateUser Service')
+  try{
+    const userDetails = await User.findByIdAndUpdate(id, obj, {new:true} )
+    if(!userDetails)
+      throw new ErrorHandler(404, 'User not found')
+    return { data: userDetails }
+
+  }catch(error){
+    logger.error(error)
+    next(error)
+  }
+  
 }
 
 export {

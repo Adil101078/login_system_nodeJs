@@ -1,0 +1,41 @@
+{{>header}}
+
+<section class = 'container mt-5'>
+
+
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Full Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">User Type</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      {{#each data}}
+
+     
+    <tr>
+      <th scope="row">{{this._id}}</th>
+     
+      <td>{{this.fullname}}</td>
+      <td>{{this.email}} </td>
+      <td>{{this.role}} </td>
+      <td>{{this.phoneNumber}} </td>
+      <td>
+          <a href='#' type='button' class='btn btn-warning btn-small'><i class='bi bi-eye'>View</i></a>
+          <a href='#' type='button' class='btn btn-primary btn-small'><i class='bi bi-pencil'>Edit</i></a>
+          <a href='#' type='button' class='btn btn-danger btn-small'><i class='bi bi-x'>Delete</i></a>
+      </td>
+    </tr>
+      {{/each}}
+  </tbody>
+</table>
+</section>
+
+
+
