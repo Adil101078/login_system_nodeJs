@@ -8,12 +8,13 @@ const userSchema = new mongoose.Schema({
     email:{type: String, required: true},
     fullname:{type: String },
     password:{type: String, required: true},
-    image:{type: String},
+    image:{type: String, default:null},
     emailToken:{type:String},
     isVerified:{type: Boolean, default:false},
     status:{type: String, default: 'active'},
     role:{ type: String, default:'user', enum: ["admin", "user"]},
-    phoneNumber: {type: String }
+    phoneNumber: {type: String },
+    otp: {type: Number, default:null}
 });
 
 userSchema.pre('save', async function (next) {

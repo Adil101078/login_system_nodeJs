@@ -3,29 +3,29 @@ import winston from 'winston'
 
 const logger = winston.createLogger({
     transports: [
-        new winston.transports.File({
-            level:'info',
-            filename: './logs/logs.log',
-            handleExceptions: true,
-            json: true,
-            maxsize: 5242880,
-            maxFiles: 5,
-            format: winston.format.combine(
+        // new winston.transports.File({
+        //     level:'info',
+        //     filename: './logs/logs.log',
+        //     handleExceptions: true,
+        //     json: true,
+        //     maxsize: 5242880,
+        //     maxFiles: 5,
+        //     format: winston.format.combine(
                
-                winston.format.timestamp({
-                   format: 'MMM-DD-YYYY HH:mm:ss'
-               }),
-                winston.format.printf(info => `${info.level}: ${[info.timestamp]}: ${info.message}`),
-            ),
-            colorize: true
-        }),
+        //         winston.format.timestamp({
+        //            format: 'MMM-DD-YYYY HH:mm:ss'
+        //        }),
+        //         winston.format.printf(info => `${info.level}: ${[info.timestamp]}: ${info.message}`),
+        //     ),
+        //     colorize: true
+        // }),
         new winston.transports.Console({
             level: 'debug',
             handleExceptions: true,
             json: true,
             colorize: true,
             format: winston.format.combine(
-               
+                winston.format.colorize(),
                 winston.format.timestamp({
                    format: 'MMM-DD-YYYY HH:mm:ss'
                }),

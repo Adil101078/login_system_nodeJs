@@ -1,8 +1,10 @@
 class ErrorHandler extends Error {
   constructor(statusCode, message) {
-    super()
+    super(message)
     this.statusCode = statusCode
     this.message = message
+    this.isOperatinal = true
+    Error.captureStackTrace(this, this.constructor)
   }
 }
 
@@ -16,13 +18,13 @@ const handleError = (err, res) => {
 }
 const handleResponse = ({
   res,
-  statusCode = 200,
+  statusCode=200,
   msg = 'Success',
   data = {},
   token,
   result = 1,
 }) => {
-  res.status(statusCode).send({ result, msg, data, token })
+  res.status(statusCode).send({ result,msg, data, token })
 }
 
 export { ErrorHandler, handleError, handleResponse }

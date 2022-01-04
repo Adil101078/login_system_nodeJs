@@ -11,11 +11,11 @@ const verifyToken = (req, res, next) => {
       token = req.headers['authorization'].split(' ')[1]
 
     if (!token)
-      throw new ErrorHandler(403, 'No token provided')
+      throw new ErrorHandler(401, 'Please Login to continue')
     else {
       jwt.verify(token, process.env.JWT_KEY, (err, decoded) => {
         if (err)
-        throw new ErrorHandler(500, 'Token authentication failed')
+        throw new ErrorHandler(401, 'Seesion expires. Please login to continue')
         else {
           req._id = decoded._id
           next()

@@ -1,5 +1,6 @@
 import User from  './userModel.js'
 import logger from '../../middlewares/logger.js'
+import { ErrorHandler } from '../../helpers/globalHandler.js'
 
 const createService = async (data, next)=>{
   logger.info('Inside createUser Servcie')
@@ -24,21 +25,27 @@ const getAllUsersService = async(next)=>{
   }
 }
 
-const getUserByIdService = async(id, next)=>{
+const getUserByIdService = async(id)=>{
   logger.info('Inside getUserById Service')
   try{
-    const result = await User.findById(id)
-    return {data: result}
+    
+      const result = await User.findById(id)
+        if(result)
+         return result
+    
+      throw new ErrorHandler(404, 'No user found by given Id')
 
   }catch(error){
     logger.error(error)
-    next(error)
+     throw new Error(error)
   }
 }
 const deleteService = async(id, next)=>{
   logger.info('Inside deleteUser Service')
   try{
     const result = await User.findByIdAndRemove(id)
+    if(!result)
+      throw new ErrorHandler(404, 'user record not found')
     return {data:result}
 
   }catch(error) {
@@ -49,8 +56,10 @@ const deleteService = async(id, next)=>{
 const updateService = async(id, obj, next)=>{
   logger.info('Inside updateUser Service')
   try{
-    const userDetails = await User.findByIdAndUpdate(id, obj, {new:true})
-    return ({ data: userDetails })
+    const userDetails = await User.findByIdAndUpdate(id, obj, {new:true} )
+    if(!userDetails)
+      throw new ErrorHandler(404, 'User not found')
+    return { data: userDetails }
 
   }catch(error){
     logger.error(error)

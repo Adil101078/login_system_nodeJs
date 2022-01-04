@@ -39,10 +39,24 @@ const verifyOtp = async (otp, phone) => {
         return error
     }
 }
+
+const sendOTP = async (otp, phone)=>{
+    try{        
+        await client.messages.create({ 
+            body:`Your OTP for login is ${otp}`,
+            from: process.env.TWILIO_PHONE_NUMBER,
+            to: phone
+        }).then((message)=>console.log(message));
+    } catch(error){
+        logger.error(error)
+        return error
+    }
+}
     
 
 
 export {
     sendOtp,
-    verifyOtp
+    verifyOtp,
+    sendOTP
 }
