@@ -9,6 +9,9 @@ import {
   login,
   userProfile,
   emailVerify,
+  resetPassword,
+  verifyResetToken,
+  followerController
 } from './userController.js'
 import upload from '../../utils/upload.js'
 const route = express.Router()
@@ -23,5 +26,8 @@ route.put('/edit/:id', upload.single('image'), updateUser)
 route.delete('/delete/:id', deleteUser)
 route.post('/login', login)
 route.patch('/verify-email', emailVerify)
+route.post('/reset-password/:userId', resetPassword)
+route.patch('/reset-password/:userId/:resetToken', verifyResetToken)
+route.put('/:id/follow', verifyToken, followerController)
 
 export default route

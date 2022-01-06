@@ -18,13 +18,41 @@ const createService = async(postObj, next)=>{
 const getAllPostsService = async(next)=>{
     logger.info('Inside getAllPost Service')
     try {
-        const result = await Post.find().populate({ 
-            path: 'userId',
-            select:'fullname'
-        }).populate({
-            path:'comments',
-            select:'_id'
-        })
+        const result = await Post.find()
+        .populate('postedBy', '_id fullname')
+        .populate('comments.commentedBy', '_id fullname')
+            
+        // ])
+        // const result = await Post.aggregate([
+        //     {
+        //         $project:{
+        //             "_id":0,
+        //             "name":1,
+        //             "description":1,
+        //             "postedAt":1,
+        //             "postedBy":1,
+        //             "likes":1,
+        //             "comments":1,
+                   
+
+
+        //         }
+        //     }
+        // ])
+        // const result = await Post.aggregate([
+        //     {
+        //         $set:{
+
+        //         }
+        //     },
+        //     {                
+        //             $unset:[
+        //                 "_id",
+                        
+        //             ]
+                
+        //     }
+        // ])
         if(!result)
             throw new ErrorHandler(404, 'No records found')
         return result
@@ -39,7 +67,7 @@ const getPostByIdService = async(id)=>{
     logger.info('Inside getPostById Service')
     try{
         const result = await Post.findById(id).populate({
-            path: 'userId',
+            path: 'postedBy',
             select:'fullname'
         })
         if(!result)
@@ -54,7 +82,7 @@ const getPostByIdService = async(id)=>{
 const deleteService = async(id, next)=>{
     logger.info('Inside deletePost Service')
     try {
-        const result = await Post.findByIdAndRemove(id)
+        const result = await Post.findById(id).populate('postedBy', '_id')
         if(!result)
             throw new ErrorHandler(400, 'Could not find')
         return result       

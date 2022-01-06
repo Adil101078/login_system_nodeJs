@@ -7,6 +7,7 @@ import {
     } from './postService.js'
 import logger from '../../middlewares/logger.js'
 import { ErrorHandler, handleResponse } from '../../helpers/globalHandler.js'
+import Post from './postModel.js'
 
 const getAllPosts = async (req, res, next) => {
     logger.info('Inside getAllPost Controller')
@@ -44,16 +45,20 @@ const updatePost = async (req, res, next)=>{
     logger.info('Inside updatePost Controller')
     try {
         const { id } = req.params
-       let updateObj = {
+        let updateObj = {
            name: req.body.name,
            description: req.body.description,
-           userId: req.body.userId
+           postedBy: req.user._id
        }
+       const data = await Post.findById({_id: id})
+       if(data.postedBy.toString() !== req.user._id.toString())
+            throw new ErrorHandler(401, 'You can only update your posts')
+
        const updatePost = await updateService(id, updateObj )
         return handleResponse({
             res,
             msg:'Post updated successfully',
-            ...updatePost
+            data:updatePost
         })
     } catch (error) {
         logger.error(error)
@@ -64,9 +69,10 @@ const updatePost = async (req, res, next)=>{
 const createPost =async (req, res, next) => {
     logger.info('Inside createPost Controller')
     try {
-        const {name, description, userId} = req.body
-        const postObj = { name, description, userId}
+        const {name, description} = req.body
+        const postObj = { name, description, postedBy:req.user._id}
         const data = await createService(postObj)
+        console.log(postObj)
         return handleResponse({
             res,
             msg:'Post created',
@@ -83,16 +89,24 @@ const createPost =async (req, res, next) => {
 const deletePost = async (req, res, next) => {
     logger.info('Inside deletePost Controller')
     try {
-        const data = await deleteService(req.params.id)
+        const {id} = req.params
+        const data = await deleteService(id)
+        console.log(data.postedBy._id)
         if(!data)
             throw new ErrorHandler(400, 'No record found')
-        return handleResponse({
-            res,
-            data,
-            msg:'Post deleted successfully'
-        })
+        if(data){
+
+            if(data.postedBy._id.toString() !== req.user._id.toString()) 
+                throw new ErrorHandler(401, 'You can only delete post posted by you')
+            await data.remove()
+            return handleResponse({
+                res,
+                data,
+                msg:'Post deleted successfully'
+            })
+        }
     } catch (error) {
-        logger.error(error)
+        logger.error(error.message)
         next(error)
     }
 }
@@ -100,26 +114,69 @@ const likePostController = async (req, res, next) => {
     logger.info('Inside likePost Controller')
     try {
         const {id} = req.params
-        const findPost = await getPostByIdService(id)
-        console.log(findPost)
-        if(!findPost) throw new ErrorHandler(404, 'Post not found')
-        findPost.likes_count += 1
-        await findPost.save()
-        return handleResponse({
-            res,
-            msg:'Post liked',
-            data:findPost.likes_count
-        })
+        const post = await Post.findById(id)
+        if(!post.likes.includes(req.user._id)){
+            await Post.updateOne( {_id:id}, {
+                $push:{
+                    likes:req.user._id
+                }
+            },
+            { new: true }
+            )
+            return handleResponse({
+                res,
+                msg:`Post has been liked by ${req.user.fullname}`
+                
+            })
+        } else{
+            await Post.updateOne( {_id:id}, {
+                $pull:{
+                    likes:req.user._id
+                }
+            },
+            { new: true }
+            )
+            
+            return handleResponse({
+                res,
+                msg:`Post has been disliked by ${req.user.fullname}`
+                
+            })
+        }
     } catch (error) {
-        logger.error(error)
+        logger.error(error.message)
         next(error)
     }
 }
-const commentController = async(req, res, next)=>{
+const addCommentController = async(req, res, next)=>{
        try{
             const { id } = req.params
-            const findPost = await Post.getPostByIdService(id)
-            if(!findPost) throw new ErrorHandler(404, 'Post not found')
+            const commentObj = {
+                text:req.body.text,
+                commentedBy:req.user._id
+            }
+            
+            const post = await Post.findById(id)
+            .populate('comments.commentedBy', '_id fullname')
+            .populate('postedBy', 'fullname')
+            if(!post) throw new ErrorHandler(404, 'Post not found')
+            await Post.updateOne({_id: id},
+                {
+                    $push:
+                    {
+                         comments:commentObj
+                        }
+                    },
+                     {
+                          new:true 
+                        }
+                    )
+            
+            return handleResponse({
+                res,
+                msg:`${req.user.fullname} commented on ${post.postedBy.fullname}'s post`,
+                data:post
+            })
             
        }catch(error){
            logger.error(error)
@@ -127,12 +184,86 @@ const commentController = async(req, res, next)=>{
        }
 }
 
+const deleteCommentController = async(req, res, next)=>{
+    logger.info('Inside deleteComment Controller')
+    try {
+        const { id, commentId } = req.params
+        const data = await Post.findOne({_id:id})
+        console.log(data)
+        if(data){
+            const comment = await Post.findOne({_id:id}, {'comments.commentedBy':req.user._id})
+            
+        if(comment.toString() !== req.user._id.toString()){
+            throw new ErrorHandler(401, 'You can delete yours comments only')
+           
+        }
+        await comment.remove()
+        return handleResponse({
+            res,
+            msg:`Comment deleted successfully`,
+            data:data
+        })
+    } 
+        
+    } catch (err) {
+        logger.error(err.message)
+        next(err)
+    }
+}
+
+const likeCommentController = async(req, res, next)=>{
+    logger.info('Inside likeComment Controller')
+    try {
+        const { id, commentId } = req.params
+        const post = await Post.findOne({_id:id})
+        let like =   post.comments.find(x=>
+            x._id.toString() === commentId.toString()
+        )?.likes
+        console.log(like)
+        if(typeof like !== "undefined"){
+
+            if(!like.includes(req.user._id)){
+                
+                const data = await  Post.updateOne({_id: id, "comments._id": commentId},
+                    {
+                        $push:
+                        {"comments.$.likes": req.user._id}
+                    });
+                return handleResponse({
+                    res,
+                    msg:`Comment liked by ${req.user.fullname}`,
+                    data:data
+                })
+            } else {
+        }
+            const data = await Post.updateOne({_id:id, 'comments._id': commentId},
+            {
+                $pull:{ 'comments.$.likes': req.user._id}
+            })
+            return handleResponse({
+                res,
+                msg:`Comment disliked by${req.user.fullname}`,
+                data:data
+            })
+        }
+        throw new ErrorHandler(404, 'comment Id not found')
+    } catch (err) {
+        logger.error(err)
+        next(err)
+    }
+}
+
+
+
 export { 
     createPost,
     getAllPosts,
     getPostById,
     updatePost,
     deletePost,
-    likePostController
+    likePostController,
+    addCommentController,
+    deleteCommentController,
+    likeCommentController
 
     }
