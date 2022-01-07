@@ -189,22 +189,28 @@ const deleteCommentController = async(req, res, next)=>{
     try {
         const { id, commentId } = req.params
         const data = await Post.findOne({_id:id})
-        console.log(data)
-        if(data){
-            const comment = await Post.findOne({_id:id}, {'comments.commentedBy':req.user._id})
+        let findComments = data.comments.filter(x=> 
+            x.commentedBy.toString() === req.user._id.toString()
+            )
+        let match = data.comments.find(x=>
+            x._id.toString() === commentId.toString()
+            )
+        if(typeof findComments !== "undefined"){
+            if(typeof match !== "undefined"){
+                await match.remove()
+                await data.save()
+                return handleResponse({
+                  res,
+                  msg:`Comment deleted successfully`,
+                  data:match
+                  }) 
+            } else {
+                throw new ErrorHandler(401, 'Comment not found')
+            }
             
-        if(comment.toString() !== req.user._id.toString()){
-            throw new ErrorHandler(401, 'You can delete yours comments only')
-           
-        }
-        await comment.remove()
-        return handleResponse({
-            res,
-            msg:`Comment deleted successfully`,
-            data:data
-        })
-    } 
-        
+       } else{
+           throw new ErrorHandler(401, 'You can delete only your comments')
+       }
     } catch (err) {
         logger.error(err.message)
         next(err)
@@ -219,7 +225,6 @@ const likeCommentController = async(req, res, next)=>{
         let like =   post.comments.find(x=>
             x._id.toString() === commentId.toString()
         )?.likes
-        console.log(like)
         if(typeof like !== "undefined"){
 
             if(!like.includes(req.user._id)){
