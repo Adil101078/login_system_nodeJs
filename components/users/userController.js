@@ -8,7 +8,7 @@ import {
 import crypto from "crypto";
 import User from "./userModel.js";
 import _ from "lodash";
-import sendEmail from "../../utils/mailer.js";
+import {sendEmail, forgotPasswordLink } from "../../utils/mailer.js";
 import logger from "../../middlewares/logger.js";
 import dotenv from "dotenv"
 import { ErrorHandler, handleResponse } from '../../helpers/globalHandler.js'
@@ -62,21 +62,25 @@ const updateUser = async (req, res, next) => {
 const createUser = async (req, res, next) => {
   logger.info("Inside createuser Controller");
   try {
-    // const { email, phoneNumber } = req.body
-    // const user = await User.findOne({ email});
-    // if (user.email === email) {
-    //   console.log(user)
-    //   throw new ErrorHandler(401, 'Email already exists')
-    // }
-    // if(user.phoneNumber === phoneNumber) {
-    //   throw new ErrorHandler(401, 'A user with this phone number already exists')
-    // }
+    const { email, phoneNumber } = req.body
+    const user = await User.findOne({email});
+    if(user){
+      if ( user.email === email )
+         throw new ErrorHandler(401, 'Email already exists')     
+    } 
+    const userPhone = await User.findOne({phoneNumber})
+    if(userPhone){
+      if(userPhone.phoneNumber === phoneNumber)
+        throw new ErrorHandler(401, 'A user with this phone number already exists')   
+   }
+
+    
     const userObj = {
       username: req.body.username,
       fullname: req.body.fullname,
       email: req.body.email,
       password: req.body.password,
-      image: req.file.path,
+      // image: req.file.path,
       phoneNumber: req.body.phoneNumber,
       emailToken: crypto.randomBytes(32).toString("hex")
     };
@@ -180,7 +184,7 @@ const login = async (req, res, next) => {
 const userProfile = async (req, res, next) => {
   logger.info("Inside userProfile Controller");
   try {
-    const user = await User.findOne({ id: req._id });
+    const user = await User.findOne({ _id: req.user });
     if (!user) {
       throw new ErrorHandler(400, 'User not found');
     } else return handleResponse({ res, data: user }); 
@@ -188,7 +192,146 @@ const userProfile = async (req, res, next) => {
     logger.error(error);
     next(error)
   }
-};
+}
+
+const resetPassword = async(req, res, next)=>{
+  logger.info('Inside resetPassword Controller')
+  try {
+    const { email } = req.body
+    if(email ==null) throw new ErrorHandler(400, 'Please provide the email')
+    const user = await User.findOne({email})
+    if(!user)
+      throw new ErrorHandler(400, 'Email not registered')
+    const resetToken = crypto.randomBytes(32).toString("hex") + user.password
+    user.resetToken = resetToken
+    await user.save()
+    const emailData = {
+        reciever: user.email,
+        sender: process.env.SENDER_EMAIL,
+        resetToken:resetToken,
+        host: req.headers.host,
+        email: req.body.email,
+        userId: req.params.userId
+      }
+      forgotPasswordLink(emailData)
+      return handleResponse({
+        res,
+        msg:'A link has been sent to your email to reset your password',
+        data:user.resetToken
+      })
+
+  } catch (err) {
+    logger.error(err)
+    next(err)
+  }
+}
+
+const verifyResetToken = async(req, res, next)=>{
+  logger.info('Inside verifyResetToken Controller')
+  try {
+    const { resetToken, userId } = req.params
+    const { password, confirmPassword } = req.body
+    const userResetToken = await User.findOne({resetToken:resetToken})
+    if(!userResetToken)
+      throw new ErrorHandler(401, 'Link has been expired')
+    const user = await User.findOne({_id:userId})
+    if(!user)
+      throw new ErrorHandler(401, 'Invalid user')
+    if(password !== confirmPassword)
+      throw new ErrorHandler(400, 'Passwords does not match')
+     
+      if(user){        
+        const userObj = {
+          password:req.body.password,
+          resetToken:null
+        }
+        
+        const data = await User.updateOne(userObj)
+        return handleResponse({
+          res,
+          msg:'Password changed successfully',
+          data:data
+        })
+    }
+  } catch (err) {
+    logger.error(err)
+    next(err)
+  }
+}
+
+const followerController = async(req, res, next)=>{
+  logger.info('Inside follower Controller')
+  try {
+    const { id } = req.params
+    const  userId  = req.user._id
+    const user = await User.findById(id)
+
+    if(user._id.toString() === userId.toString()){
+      throw new ErrorHandler(404, 'You cannot follow yourself')
+    } 
+    if(user.followers.includes(userId)){
+      await User.updateOne({
+        _id:id
+      },
+        {$pull:
+          { followers:userId },
+          $inc:
+          { followersCount:-1 }
+        },
+        {
+          new: true
+        }
+        )
+      await User.updateOne({_id:userId },
+        { $pull:
+          { followings:id }, 
+          $inc:
+          { followingsCount:-1 }
+        },
+        {
+          new: true
+        }
+        )
+      return handleResponse({
+        res,
+        msg:`You unfollow ${user.fullname}`,
+        data:user._id
+      })
+    }
+     else{
+     await User.updateOne({
+       _id:id
+      },
+      { $push:
+        { followers:userId },
+        $inc:
+        { followersCount:1 }
+      }, {
+        new: true
+      })
+     await User.updateOne({
+       _id: userId
+      },
+      {
+        $push:
+        { followings: id},
+        $inc:
+        { followingsCount:1 }
+      },
+      {
+        new: true
+      })
+      return handleResponse({
+        res,
+        msg:`You are following ${user.fullname}`,
+        data:user._id
+      })
+    }
+  } catch (err) {
+    logger.error(err)
+    next(err)
+  }
+}
 
 export {
   createUser,
@@ -199,4 +342,7 @@ export {
   login,
   userProfile,
   emailVerify,
+  resetPassword,
+  verifyResetToken,
+  followerController
 };

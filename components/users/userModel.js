@@ -12,9 +12,20 @@ const userSchema = new mongoose.Schema({
     emailToken:{type:String},
     isVerified:{type: Boolean, default:false},
     status:{type: String, default: 'active'},
-    role:{ type: String, default:'user', enum: ["admin", "user"]},
+    role:{ type: String, default:'user', enum: ["admin", "user", "vendor"]},
     phoneNumber: {type: String },
-    otp: {type: Number, default:null}
+    otp: {type: Number, default:null},
+    resetToken:{ type: String, default:''},
+    followers:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'User'
+      }],
+    followings:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'User'
+      }],
+    followersCount:{ type:Number, default:0},
+    followingsCount:{ type: Number, default:0}
 });
 
 userSchema.pre('save', async function (next) {

@@ -68,6 +68,18 @@ const updateService = async(id, obj, next)=>{
   
 }
 
+// const resetPassword = async(obj,next)=>{
+//   logger.info('Inside resetPassword Service')
+//   try {
+//     const getUser = await User.findOne(obj)
+//     if(!getUser) throw new ErrorHandler(400, 'User not exists')
+//     return getUser
+//   } catch (err) {
+//     logger.error(err)
+//     next(err)
+//   }
+// }
+
 export {
   createService,
   getAllUsersService,
