@@ -1,4 +1,5 @@
 import express from 'express'
+import verifyToken from '../../auth/jwt.js'
 import { 
     getAllUsers,
     deleteUser,
@@ -7,18 +8,22 @@ import {
     login,
     verifyLogin,
     updateUser,
-    getUserById
+    getUserById,
+    acceptVendorApproval,
+    rejectVendorApproval
 } from './adminController.js'
 const adminRoute = express.Router();
 
-adminRoute.get('/allUsers', getAllUsers)
-adminRoute.patch('/user/disable', disableUser)
-adminRoute.put('/user/:userId', updateUser)
-adminRoute.put('/user/:userId', getUserById)
-adminRoute.delete('/user/:userId', deleteUser)
-adminRoute.patch('/user/enable', enableUser)
 adminRoute.post('/login', login)
 adminRoute.post('/verifyOtp', verifyLogin)
+adminRoute.get('/allUsers', getAllUsers)
+adminRoute.get('/user/:userId',verifyToken, getUserById)
+adminRoute.delete('/user/:userId', verifyToken, deleteUser)
+adminRoute.put('/user/disable', verifyToken, disableUser)
+adminRoute.put('/user/:userId',verifyToken, updateUser)
+adminRoute.put('/user/enable',verifyToken, enableUser)
+adminRoute.put('/acceptVendor/:vendorId', verifyToken, acceptVendorApproval)
+adminRoute.put('/rejectVendor/:vendorId', verifyToken, rejectVendorApproval)
 
 
 
