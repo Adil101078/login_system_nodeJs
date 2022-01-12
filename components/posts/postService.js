@@ -10,7 +10,7 @@ const createService = async(postObj, next)=>{
         return data
         
     } catch (error) {
-        logger.error(error)
+        logger.error(error.message)
         next(error)
     }
 
@@ -58,15 +58,15 @@ const getAllPostsService = async(next)=>{
         return result
         
     } catch (error) {
-        logger.error(error)
+        logger.error(error.message)
         next(error)
     }
 }
 
-const getPostByIdService = async(id)=>{
+const getPostByIdService = async(postId)=>{
     logger.info('Inside getPostById Service')
     try{
-        const result = await Post.findById(id).populate({
+        const result = await Post.findById(postId).populate({
             path: 'postedBy',
             select:'fullname'
         })
@@ -79,10 +79,10 @@ const getPostByIdService = async(id)=>{
         next(error)
     }
 }
-const deleteService = async(id, next)=>{
+const deleteService = async(postId, next)=>{
     logger.info('Inside deletePost Service')
     try {
-        const result = await Post.findById(id).populate('postedBy', '_id')
+        const result = await Post.findById(postId).populate('postedBy', '_id')
         if(!result)
             throw new ErrorHandler(400, 'Could not find')
         return result       
