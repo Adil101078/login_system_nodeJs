@@ -474,27 +474,22 @@ const vendorProfile = async(req, res, next)=>{
   try {
     let vendorId = req.user._id
     let loggedInVendor = req.user
-    console.log(loggedInVendor.role)
     const vendor = await User.findById({_id: vendorId})
-    console.log(vendor._id)
+
     if(vendor.role !== loggedInVendor.role)
       throw new ErrorHandler(404, 'User must be vendor')
+
     if(!vendor || vendor === null)
-      throw new ErrorHandler(404, 'Vendor not found')
-    
+      throw new ErrorHandler(404, 'Vendor not found')    
     
     const items = await Item.find({createdBy: vendorId})
-       if(items === null)
-          throw new ErrorHandler(400, 'No items found')
-        return handleResponse({
-          res,
-          msg:'Items fetched',
-          data:{vendor, items}
-        })
-    
-   
-   
-   
+      if(items === null)
+        throw new ErrorHandler(400, 'No items found')
+      return handleResponse({
+        res,
+        msg:'Items fetched',
+        data:{vendor, items}
+        })   
   } catch (err) {
     logger.error(err.message)
     next(err)
