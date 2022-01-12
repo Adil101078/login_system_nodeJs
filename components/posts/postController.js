@@ -5,9 +5,10 @@ import {
      updateService,
      deleteService
     } from './postService.js'
-import logger from '../../middlewares/logger.js'
 import { ErrorHandler, handleResponse } from '../../helpers/globalHandler.js'
+import logger from '../../middlewares/logger.js'
 import Post from './postModel.js'
+import User from '../users/userModel.js'
 
 const getAllPosts = async (req, res, next) => {
     logger.info('Inside getAllPost Controller')
@@ -29,7 +30,8 @@ const getAllPosts = async (req, res, next) => {
 const getPostById = async (req, res, next) => {
     logger.info('Inside getPostById Controller')
     try{
-        const data =  await getPostByIdService(req.params.id)
+        const { postId } = req.params
+        const data =  await getPostByIdService(postId)
         if(!data)
           throw new ErrorHandler(400, 'No record found')
         return handleResponse({ 
@@ -44,24 +46,26 @@ const getPostById = async (req, res, next) => {
 const updatePost = async (req, res, next)=>{
     logger.info('Inside updatePost Controller')
     try {
-        const { id } = req.params
+        let loggedInUser = req.user._id
+        const { postId } = req.params
+        const { name, description } = req.body
         let updateObj = {
-           name: req.body.name,
-           description: req.body.description,
-           postedBy: req.user._id
+           name,
+           description,
+           postedBy: loggedInUser
        }
-       const data = await Post.findById({_id: id})
-       if(data.postedBy.toString() !== req.user._id.toString())
+       const data = await Post.findById({_id: postId })
+       if(data.postedBy.toString() !== loggedInUser.toString())
             throw new ErrorHandler(401, 'You can only update your posts')
 
-       const updatePost = await updateService(id, updateObj )
+       const updatePost = await updateService(postId, updateObj )
         return handleResponse({
             res,
             msg:'Post updated successfully',
             data:updatePost
         })
     } catch (error) {
-        logger.error(error)
+        logger.error(error.message)
         next(error)
     }
 }
@@ -69,18 +73,21 @@ const updatePost = async (req, res, next)=>{
 const createPost =async (req, res, next) => {
     logger.info('Inside createPost Controller')
     try {
-        const {name, description} = req.body
-        const postObj = { name, description, postedBy:req.user._id}
+        let loggedInUser = req.user._id
+        const {name, description} = req.body        
+        const postObj = {
+            name,
+            description,
+            postedBy: loggedInUser
+        }
         const data = await createService(postObj)
-        console.log(postObj)
         return handleResponse({
             res,
             msg:'Post created',
             data
-        })
-        
+            })
     } catch (error) {
-        logger.error(error)
+        logger.error(error.message)
         next(error)
     }
 }
@@ -89,22 +96,20 @@ const createPost =async (req, res, next) => {
 const deletePost = async (req, res, next) => {
     logger.info('Inside deletePost Controller')
     try {
-        const {id} = req.params
-        const data = await deleteService(id)
-        console.log(data.postedBy._id)
-        if(!data)
-            throw new ErrorHandler(400, 'No record found')
-        if(data){
+        let loggedInUser = req.user._id
+        const { postId } = req.params
+        const post = await Post.findOne({ postId })
+        if(post.postedBy._id.toString() !== loggedInUser.toString())
+            throw new ErrorHandler(401, 'You can delete only your post')
+        if(!post)
+            throw new ErrorHandler(404, 'Post not found')
 
-            if(data.postedBy._id.toString() !== req.user._id.toString()) 
-                throw new ErrorHandler(401, 'You can only delete post posted by you')
-            await data.remove()
-            return handleResponse({
-                res,
-                data,
-                msg:'Post deleted successfully'
-            })
-        }
+        const data = await deleteService(postId)
+        return handleResponse({
+            res,
+            msg:'Post deleted',
+            data
+        })
     } catch (error) {
         logger.error(error.message)
         next(error)
@@ -113,33 +118,31 @@ const deletePost = async (req, res, next) => {
 const likePostController = async (req, res, next) => {
     logger.info('Inside likePost Controller')
     try {
-        const {id} = req.params
-        const post = await Post.findById(id)
-        if(!post.likes.includes(req.user._id)){
-            await Post.updateOne( {_id:id}, {
-                $push:{
-                    likes:req.user._id
-                }
-            },
-            { new: true }
-            )
+        let loggedInUser = req.user
+        const { postId } = req.params
+        const post = await Post.findById({postId})
+        if(!post.likes.includes(loggedInUser._id)){
+            const postLiked = await Post.findByIdAndUpdate(
+               {_id: postId },
+               { $push:{ likes:loggedInUser }},
+               { new: true })
+
             return handleResponse({
                 res,
-                msg:`Post has been liked by ${req.user.fullname}`
+                msg:`Post has been liked by ${loggedInUser.fullname}`,
+                data:postLiked
                 
             })
         } else{
-            await Post.updateOne( {_id:id}, {
-                $pull:{
-                    likes:req.user._id
-                }
-            },
-            { new: true }
-            )
+            const postUnliked = await Post.findByIdAndUpdate(
+               {_id: postId },
+               { $pull:{ likes:loggedInUser._id }},
+               { new: true } )
             
             return handleResponse({
                 res,
-                msg:`Post has been disliked by ${req.user.fullname}`
+                msg:`Post has been disliked by ${loggedInUser.fullname}`,
+                data:postUnliked
                 
             })
         }
@@ -150,36 +153,31 @@ const likePostController = async (req, res, next) => {
 }
 const addCommentController = async(req, res, next)=>{
        try{
-            const { id } = req.params
+            let loggedInUser = req.user
+            const { postId } = req.params
+            const { text } = req.body
             const commentObj = {
-                text:req.body.text,
-                commentedBy:req.user._id
+                text,
+                commentedBy: loggedInUser._id
             }
-            
-            const post = await Post.findById(id)
+           
+            const post = await Post.findById({ _id: postId })
             .populate('comments.commentedBy', '_id fullname')
             .populate('postedBy', 'fullname')
-            if(!post) throw new ErrorHandler(404, 'Post not found')
-            await Post.updateOne({_id: id},
-                {
-                    $push:
-                    {
-                         comments:commentObj
-                        }
-                    },
-                     {
-                          new:true 
-                        }
-                    )
-            
-            return handleResponse({
-                res,
-                msg:`${req.user.fullname} commented on ${post.postedBy.fullname}'s post`,
-                data:post
-            })
-            
-       }catch(error){
-           logger.error(error)
+            if(!post || post === null)
+                throw new ErrorHandler(404, 'Post not found')
+            const addComment = await Post.findOneAndUpdate(
+                { _id: postId },
+                { $push: { comments:commentObj }},
+                { new: true })
+                return handleResponse({
+                   res,
+                   msg:`${loggedInUser.fullname} commented on ${post.postedBy.fullname}'s post`,
+                   data: addComment
+                })
+               
+       } catch(error){
+           logger.error(error.message)
            next(error)
        }
 }
@@ -187,10 +185,11 @@ const addCommentController = async(req, res, next)=>{
 const deleteCommentController = async(req, res, next)=>{
     logger.info('Inside deleteComment Controller')
     try {
-        const { id, commentId } = req.params
-        const data = await Post.findOne({_id:id})
-        let findComments = data.comments.filter(x=> 
-            x.commentedBy.toString() === req.user._id.toString()
+        let loggedInUser = req.user
+        const { postId, commentId } = req.params
+        const data = await Post.findOne({ _id: postId })        
+        let findComments = data.comments.filter( x=> 
+            x.commentedBy.toString() === loggedInUser._id.toString()
             )
         let match = data.comments.find(x=>
             x._id.toString() === commentId.toString()
@@ -220,34 +219,34 @@ const deleteCommentController = async(req, res, next)=>{
 const likeCommentController = async(req, res, next)=>{
     logger.info('Inside likeComment Controller')
     try {
-        const { id, commentId } = req.params
-        const post = await Post.findOne({_id:id})
-        let like =   post.comments.find(x=>
+        let loggedInUser = req.user
+        const { postId, commentId } = req.params
+        const post = await Post.findOne({_id: postId })
+        let like = post.comments.find(x=>
             x._id.toString() === commentId.toString()
         )?.likes
         if(typeof like !== "undefined"){
 
-            if(!like.includes(req.user._id)){
+            if(!like.includes(loggedInUser._id)){
                 
-                const data = await  Post.updateOne({_id: id, "comments._id": commentId},
-                    {
-                        $push:
-                        {"comments.$.likes": req.user._id}
-                    });
+                const data = await  Post.findByIdAndUpdate(
+                    {_id: postId, "comments._id": commentId },
+                    { $push: {"comments.$.likes": loggedInUser._id }},
+                    { new: true });
                 return handleResponse({
                     res,
-                    msg:`Comment liked by ${req.user.fullname}`,
-                    data:data
+                    msg:`Comment liked by ${loggedInUser.fullname}`,
+                    data
                 })
             } else {
         }
-            const data = await Post.updateOne({_id:id, 'comments._id': commentId},
-            {
-                $pull:{ 'comments.$.likes': req.user._id}
-            })
+            const data = await Post.findByIdAndUpdate(
+                { _id: postId, 'comments._id': commentId },
+                { $pull:{ 'comments.$.likes': loggedInUser._id }},
+                { new: true })
             return handleResponse({
                 res,
-                msg:`Comment disliked by${req.user.fullname}`,
+                msg:`Comment disliked by${loggedInUser.fullname}`,
                 data:data
             })
         }
