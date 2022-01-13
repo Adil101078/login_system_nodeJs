@@ -28,17 +28,17 @@ const fetchByIdService = async(id, next) => {
     }
 }
 
-const deleteUserService = async (id, next) => {
+const deleteUserService = async (userId, next) => {
     logger.info('Inside deleteUser adminService')
     try{
-        const user = await User.findOneAndRemove(id)
+        const user = await User.findByIdAndDelete(userId)
         if(!user){
             throw new ErrorHandler(404, 'No records found')
         }
         return user
 
     }catch(error) {
-        logger.error(error)
+        logger.error(error.message)
         next(error)
     }
 }

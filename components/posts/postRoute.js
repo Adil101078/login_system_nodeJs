@@ -18,11 +18,11 @@ postRoute.get('/allPosts', getAllPosts);
 postRoute.get('/:id', getPostById)
 postRoute.put('/edit/:id', verifyToken, updatePost);
 postRoute.post('/addPost',verifyToken, createPost);
-postRoute.delete('/delete/:id',verifyToken, deletePost);
-postRoute.patch('/:id/likePost', verifyToken, likePostController);
-postRoute.put('/:id/comment', verifyToken, addCommentController)
-postRoute.put('/:id/:commentId/delete', verifyToken, deleteCommentController)
-postRoute.put('/:id/:commentId/likeComment', verifyToken, likeCommentController)
+postRoute.delete('/delete/:postId',verifyToken, deletePost);
+postRoute.put('/likeUnlikePost/:postId', verifyToken, likePostController);
+postRoute.put('/comment/:postId', verifyToken, addCommentController)
+postRoute.put('/comment/delete/:postId/:commentId', verifyToken, deleteCommentController)
+postRoute.put('/likeComment/:postId/:commentId', verifyToken, likeCommentController)
 
 
 

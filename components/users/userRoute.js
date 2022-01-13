@@ -11,7 +11,11 @@ import {
   emailVerify,
   resetPassword,
   verifyResetToken,
-  followerController
+  followerController,
+  registerVendor,
+  vendorLogin,
+  verifyVendorLogin,
+  vendorProfile
 } from './userController.js'
 import upload from '../../utils/upload.js'
 const route = express.Router()
@@ -21,13 +25,19 @@ const route = express.Router()
 route.get('/allUsers', getAllUsers)
 route.get('/profile', verifyToken, userProfile)
 route.post('/register', upload.single('image'), createUser)
-route.get('/:id', getUserById)
-route.put('/edit/:id', upload.single('image'), updateUser)
-route.delete('/delete/:id', deleteUser)
+route.get('/:userId', getUserById)
+route.put('/update/:userId', upload.single('image'), updateUser)
+route.delete('/delete/:userId', verifyToken, deleteUser)
 route.post('/login', login)
-route.patch('/verify-email', emailVerify)
-route.post('/reset-password/:userId', resetPassword)
-route.patch('/reset-password/:userId/:resetToken', verifyResetToken)
-route.put('/:id/follow', verifyToken, followerController)
+route.put('/verifyEmail', emailVerify)
+route.put('/resetPassword', resetPassword)
+route.put('/verifyPassword/:userId/:resetToken', verifyResetToken)
+route.put('/followUnfollow/:userId', verifyToken, followerController)
+
+// VENDOR ROUTES
+route.post('/vendor/register', registerVendor)
+route.post('/vendor/login', vendorLogin)
+route.post('/vendor/login/2FA', verifyVendorLogin)
+route.get('/vendor/profile',verifyToken, vendorProfile)
 
 export default route

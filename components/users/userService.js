@@ -6,7 +6,7 @@ const createService = async (data, next)=>{
   logger.info('Inside createUser Servcie')
   try {
     const result = await User.create(data)
-    return {data:result}
+    return result
   } catch (error) {
     logger.error(error)
        next(error)
@@ -25,65 +25,65 @@ const getAllUsersService = async(next)=>{
   }
 }
 
-const getUserByIdService = async(id)=>{
+const getUserByIdService = async(userId, next)=>{
   logger.info('Inside getUserById Service')
   try{
     
-      const result = await User.findById(id)
+      const result = await User.findById(userId)
         if(result)
          return result
     
       throw new ErrorHandler(404, 'No user found by given Id')
 
   }catch(error){
-    logger.error(error)
-     throw new Error(error)
-  }
-}
-const deleteService = async(id, next)=>{
-  logger.info('Inside deleteUser Service')
-  try{
-    const result = await User.findByIdAndRemove(id)
-    if(!result)
-      throw new ErrorHandler(404, 'user record not found')
-    return {data:result}
-
-  }catch(error) {
-    logger.error(error)
+    logger.error(error.message)
     next(error)
   }
 }
-const updateService = async(id, obj, next)=>{
+const deleteService = async(userId, next)=>{
+  logger.info('Inside deleteUser Service')
+  try{
+    const result = await User.findByIdAndRemove(userId)
+    if(!result)
+      throw new ErrorHandler(404, 'user record not found')
+    return result
+
+  }catch(error) {
+    logger.error(error.message)
+    next(error)
+  }
+}
+const updateService = async(userId, obj, next)=>{
   logger.info('Inside updateUser Service')
   try{
-    const userDetails = await User.findByIdAndUpdate(id, obj, {new:true} )
+    const userDetails = await User.findByIdAndUpdate(userId, obj, {new:true} )
     if(!userDetails)
       throw new ErrorHandler(404, 'User not found')
-    return { data: userDetails }
+    return userDetails
 
   }catch(error){
-    logger.error(error)
+    logger.error(error.message)
     next(error)
   }
   
 }
 
-// const resetPassword = async(obj,next)=>{
-//   logger.info('Inside resetPassword Service')
-//   try {
-//     const getUser = await User.findOne(obj)
-//     if(!getUser) throw new ErrorHandler(400, 'User not exists')
-//     return getUser
-//   } catch (err) {
-//     logger.error(err)
-//     next(err)
-//   }
-// }
+const vendorRegisterService = async(vendorObj, next)=>{
+  logger.info('Inside vendorRegister Service')
+  try {
+    const newVendor = await User.create(vendorObj)
+      return newVendor
+  } catch (err) {
+    logger.error(err.message)
+    next(err)
+  }
+}
 
 export {
   createService,
   getAllUsersService,
   getUserByIdService,
   deleteService,
-  updateService
+  updateService,
+  vendorRegisterService
 }
