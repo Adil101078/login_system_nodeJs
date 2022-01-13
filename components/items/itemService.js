@@ -1,5 +1,6 @@
 import logger from '../../middlewares/logger.js'
 import Item from './itemModel.js'
+import mongoose from 'mongoose'
 
 const createItemService = async(itemObj, next)=>{
     logger.info('Inside createItem Service')
@@ -14,8 +15,24 @@ const createItemService = async(itemObj, next)=>{
 const getItemsService = async(next)=>{
     logger.info('Inside getItems Service')
     try {
-        const items = await Item.find()
+        const items = await Item.aggregate([
+            { $match:{ }}
+        ])
         return items
+    } catch (err) {
+        logger.error(err.message)
+        next(err)
+    }
+}
+
+const getItemByIdService = async(id, next)=>{
+    logger.info('Inside getItenById Service')
+    try {
+        let itemId = mongoose.Types.ObjectId(id)
+        const itemDetails = await Item.aggregate([
+            { $match:{ _id: itemId }}
+        ])
+        return itemDetails
     } catch (err) {
         logger.error(err.message)
         next(err)
@@ -36,5 +53,6 @@ const updateItemService = async(itemId, itemObj, next)=>{
 export {
     createItemService,
     getItemsService,
-    updateItemService
+    updateItemService,
+    getItemByIdService
 }

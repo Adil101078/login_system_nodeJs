@@ -15,7 +15,8 @@ import {
   registerVendor,
   vendorLogin,
   verifyVendorLogin,
-  vendorProfile
+  vendorProfile,
+  updatePassword
 } from './userController.js'
 import upload from '../../utils/upload.js'
 const route = express.Router()
@@ -33,6 +34,7 @@ route.put('/verifyEmail', emailVerify)
 route.put('/resetPassword', resetPassword)
 route.put('/verifyPassword/:userId/:resetToken', verifyResetToken)
 route.put('/followUnfollow/:userId', verifyToken, followerController)
+route.put('/updatePassword', verifyToken, updatePassword)
 
 // VENDOR ROUTES
 route.post('/vendor/register', registerVendor)

@@ -9,10 +9,11 @@ import { config } from 'dotenv'
 import { engine } from 'express-handlebars'
 import { ErrorHandler } from './helpers/globalHandler.js'
 config()
+import db from './config/db.js'
 const PORT = process.env.PORT || 9000;
 const __dirname = path.resolve()
 const app = express()
-
+db
 
 app.use(express.static(`${__dirname}/public`));
 app.use(express.static(`${__dirname}/views`));

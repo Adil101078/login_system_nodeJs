@@ -4,7 +4,6 @@ import mongoose from 'mongoose';
 const postSchema = new mongoose.Schema({
     name:{ type: String, required:true },
     description:{ type: String, required:true},
-    posted_at: {type: Date, default: Date.now()},
     likes:[{
       type: mongoose.Schema.Types.ObjectId,
       ref:'User'
@@ -26,7 +25,7 @@ const postSchema = new mongoose.Schema({
     }]
    
     
-});
+}, { timestamps: true });
 
 const Post = mongoose.model('Post', postSchema);
 

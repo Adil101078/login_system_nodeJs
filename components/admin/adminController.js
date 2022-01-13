@@ -14,10 +14,13 @@ const getAllUsers = async (req, res, next) => {
 	logger.info('Inside getAllUser adminControllers')
 	try {
 		const data = await getAllUsersService()
-		res.render('layouts/main', { data })
-		// return handleResponse({ res, data })
+		// res.render('layouts/main', { data })
+		return handleResponse({
+			res,
+			data
+		})
 	} catch (error) {
-		logger.error(error)
+		logger.error(error.message)
 		next(error)
 	}
 }
@@ -25,16 +28,21 @@ const getAllUsers = async (req, res, next) => {
 const getUserById = async (req, res, next) => {
 	logger.info('Inside getUserById adminController')
 	try {
-		let loggedInUser = req.user
+		let loggedInUser = req.user._id
 		const { userId } = req.params
-		const isAdmin = await User.findOne({ _id: loggedInUser._id })
-		if (isAdmin.role !== 'admin') throw new ErrorHandler(401, 'Access denied')
+		const isAdmin = await User.aggregate([
+			{ $match: { _id: loggedInUser }}
+		])
+		if (isAdmin.map(x=>x.role).toString() !== 'admin')
+			throw new ErrorHandler(401, 'Access denied')
+
 		const user = await fetchByIdService(userId)
-		if (!user) throw new ErrorHandler(404, 'User not found')
+		if (!user)
+			throw new ErrorHandler(404, 'User not found')
 		return handleResponse({
 			res,
 			msg: 'Success',
-			user,
+			data:user,
 		})
 	} catch (error) {
 		logger.error(error.message)
@@ -45,11 +53,15 @@ const getUserById = async (req, res, next) => {
 const updateUser = async (req, res, next) => {
 	logger.info('Inside updateUser adminController')
 	try {
-		let loggedInUser = req.user
+		let loggedInUser = req.user._id
 		const { userId } = req.params
 		const { username, fullname, email, status, phoneNumber, isVerified, role } = req.body
-		const isAdmin = await User.findOne({ _id: loggedInUser._id })
-		if (isAdmin.role !== 'admin') throw new ErrorHandler(401, 'Access denied')
+		const isAdmin = await User.aggregate([
+			{ $match:{ _id: loggedInUser }}
+		])
+
+		if (isAdmin.map( x=> x.role ).toString() !== 'admin')
+			throw new ErrorHandler(401, 'Access denied')
 		
 		let userObj = {
 			username,
@@ -77,10 +89,12 @@ const updateUser = async (req, res, next) => {
 const deleteUser = async (req, res, next) => {
 	logger.info('Inside deleteUser adminControllers')
 	try {
-		let loggedInUser = req.user
+		let loggedInUser = req.user._id
 		const { userId } = req.params
-		const isAdmin = await User.findOne({ _id: loggedInUser._id })
-		if (isAdmin.role !== 'admin') throw new ErrorHandler(401, 'Access denied')
+		const isAdmin = await User.findById({ _id: loggedInUser })
+
+		if (isAdmin.role !== 'admin')
+			throw new ErrorHandler(401, 'Access denied')
 		const user = await deleteUserService(userId)
 		return handleResponse({
 			res,
@@ -95,17 +109,19 @@ const deleteUser = async (req, res, next) => {
 const disableUser = async (req, res, next) => {
 	logger.info('Inside disable adminControllers')
 	try {
-		let loggedInUser = req.user
+		let loggedInUser = req.user._id
 		const { email } = req.body
-		const isAdmin = await User.findOne({ _id: loggedInUser._id })
+		const isAdmin = await User.findById({ _id: loggedInUser })
 		const user = await User.findOne({ email })
 		if (isAdmin.role !== 'admin')
 			throw new ErrorHandler(401, 'Access denied')
+
 		if(!user || user === null)
 			throw new ErrorHandler(404, 'User not found')
+
 		const disableUser = await User.findByIdAndUpdate(
 			{_id: user._id},
-			{ $set:{ status: 'inActive', isVerified: false}},
+			{ $set:{ status: 'inActive', isVerified: false }},
 			{ new: true }
 			)
 		
@@ -125,7 +141,7 @@ const enableUser = async (req, res, next) => {
 	try {
 		let loggedInUser = req.user
 		const { email } = req.body
-		const isAdmin = await User.findOne({ _id: loggedInUser._id })
+		const isAdmin = await User.findById({ _id: loggedInUser._id })
 		const user = await User.findOne({ email })
 		if (isAdmin.role !== 'admin')
 			throw new ErrorHandler(401, 'Access denied')
@@ -157,7 +173,7 @@ const login = async (req, res, next) => {
 		}
 		const user = await User.findOne({ email }).select('+password')
 
-		if (!user || !(await user.verifyPassword(password, user.password))) {
+		if (!user || !(await user.correctPassword(password, user.password))) {
 			throw new ErrorHandler(400, 'Incorrect email or password')
 		}
 		if (user.role !== 'admin')
@@ -186,7 +202,7 @@ const verifyLogin = async (req, res, next) => {
 		if (user.otp === otp) {
 			const updateUser = await User.findByIdAndUpdate(
 				{ _id: user._id },
-				{ $set: { otp: null}},
+				{ $set: { otp: null }},
 				{ new: true }
 			)
 			const token = user.generateJwt()
@@ -275,6 +291,29 @@ const rejectVendorApproval = async (req, res, next) => {
 	}
 }
 
+const updateUserPassword = async(req, res, next)=>{
+	logger.info('Inside updatePassword Controller')
+	try {
+		let loggedInUser = req.user
+    	const { userId } = req.params
+    	const { newPassword } = req.body
+    	const user = await User.findById({ _id: userId }).select('+password')
+    	if(!user)
+      		throw new ErrorHandler(401, 'User not found')
+   		if( loggedInUser.role !== 'admin')
+		   	throw new ErrorHandler(401, 'Unauthorized access')
+    	user.password = newPassword
+     	await user.save()
+     	return handleResponse({
+       res,
+       msg:'Password changed succesfully',
+	   data: user
+     })
+	} catch (err) {
+		logger.error(err.message)
+		next(err)
+	}
+}
 export {
 	getAllUsers,
 	deleteUser,
@@ -286,4 +325,5 @@ export {
 	getUserById,
 	rejectVendorApproval,
 	acceptVendorApproval,
+	updateUserPassword
 }

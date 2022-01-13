@@ -37,7 +37,8 @@ const getUserById = async (req, res, next) => {
   try {
     const { userId } = req.params
     const user = await User.findById({ _id: userId })
-    if(!user) throw new ErrorHandler(404, 'User not found')
+    if(!user)
+      throw new ErrorHandler(404, 'User not found')
     const userDetails = await getUserByIdService(userId)
     return handleResponse({
       res,
@@ -48,19 +49,41 @@ const getUserById = async (req, res, next) => {
     logger.error(error.message);
     next(error)
   }
-};
+}
+
+const updatePassword = async(req, res, next)=>{
+  logger.info('Inside updatePassword Controller')
+  try {
+    let loggedInUser = req.user._id
+    const { userId } = req.params
+    const { currentPassword, newPassword} = req.body
+    const user = await User.findById({ _id: loggedInUser }).select('+password')
+    if(!user)
+      throw new ErrorHandler(401, 'You can only change your password')
+    if(!(await user.correctPassword(currentPassword, user.password)))
+      throw new ErrorHandler(401, 'Your current password is wrong')
+     user.password = newPassword
+     await user.save()
+     return handleResponse({
+       res,
+       msg:'Password changed succesfully'
+     })
+  } catch (err) {
+    logger.error(err.message)
+    next(err)
+  }
+}
 const updateUser = async (req, res, next) => {
   logger.info("Inside updateUser Controller")
   try {
     let loggedInUser = req.user._id
     const { userId } = req.params
-    const { fullname, phoneNumber, email, password } = req.body
+    const { fullname, phoneNumber, email } = req.body
     let userDets = {
       fullname,
       email,
-      password,
       phoneNumber,
-      // image: req.file.path
+      image: req.file.path
     }
     const user = await User.findById({ _id: loggedInUser })
     if(user._id.toString() !== loggedInUser.toString())
@@ -89,15 +112,13 @@ const createUser = async (req, res, next) => {
       phoneNumber
     } = req.body
     const user = await User.findOne({email});
-    if(user){
-      if ( user.email === email )
+    if(user)
          throw new ErrorHandler(401, 'Email already exists')     
-    } 
+  
     const userPhone = await User.findOne({phoneNumber})
-    if(userPhone){
-      if(userPhone.phoneNumber === phoneNumber)
+    if(userPhone)
         throw new ErrorHandler(401, 'A user with this phone number already exists')   
-   }
+   
    let  emailToken = crypto.randomBytes(32).toString("hex")
     const userObj = {
       username,
@@ -188,16 +209,17 @@ const login = async (req, res, next) => {
   logger.info("Inside userLogin Controller");
   try {
     const { email, password } = req.body;
-    if (!email || !password) {
+    if (!email || !password)
       throw new ErrorHandler(404, 'Missing required email and password fields')
-    }
+
     const user = await User.findOne({ email }).select("+password");
 
-    if (!user) {
+    if (!user)
       throw new ErrorHandler(401, 'Email not registered');
-    }
-    if(!(await user.verifyPassword(password, user.password)))
+
+    if(!(await user.correctPassword(password, user.password)))
       throw new ErrorHandler(403, 'Incorrect email or password')
+
     if (user.status === "inActive") {
       throw new ErrorHandler(401, 'Your account is inactive. Please contact administrator');
     }
@@ -362,23 +384,16 @@ const followerController = async(req, res, next)=>{
 const registerVendor = async(req, res, next)=>{
   logger.info('Inside registerVendor Controller')
     try {
-        const { email, phoneNumber, fullname, password, vendorPurpose } = req.body
+        const { email, fullname, phoneNumber, vendorPurpose } = req.body
         const vendor = await User.findOne({email})
-        if(vendor){
-          if ( vendor.email === email )
+        if(vendor)
              throw new ErrorHandler(401, 'A user with this email already exists')     
-          } 
-        const vendorPhone = await User.findOne({phoneNumber})
-        if(vendorPhone){
-          if(vendorPhone.phoneNumber === phoneNumber)
-            throw new ErrorHandler(401, 'A user with this phone number already exists')   
-        }
+  
         let vendorObj = {
             email,
-            password,
             fullname,
-            phoneNumber,
-            vendorPurpose
+            vendorPurpose,
+            phoneNumber
         }
         let emailData = {
             reciever:process.env.ADMIN_EMAIL,
@@ -387,7 +402,7 @@ const registerVendor = async(req, res, next)=>{
             vendorName:vendorObj.fullname,
             vendorEmail:vendorObj.email,
             purpose:vendorObj.purpose,
-            phone:vendorObj.phoneNumber
+            phoneNumber: vendorObj.phoneNumber
 
         }
         
@@ -407,7 +422,7 @@ const registerVendor = async(req, res, next)=>{
 const vendorLogin = async(req, res, next)=>{
   logger.info('Inside adminLogin Controller')
   try{
-      const {email, password} = req.body
+      const { email, password } = req.body
       if(!email || !password){
           throw new ErrorHandler (404, 'Please provide email and password');
       }
@@ -511,5 +526,6 @@ export {
   registerVendor,
   vendorLogin,
   verifyVendorLogin,
-  vendorProfile
+  vendorProfile,
+  updatePassword
 };

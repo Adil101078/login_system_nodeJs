@@ -1,11 +1,14 @@
 import User from '../users/userModel.js'
 import {ErrorHandler} from '../../helpers/globalHandler.js'
 import logger from '../../middlewares/logger.js'
+import mongoose from 'mongoose'
 
 const getAllUsersService = async (next) => {
     logger.info('Inside getAllUsers adminService')
     try {
-        const users = await User.find().lean()
+        const users = await User.aggregate([
+            { $match: {}}
+        ])
         if(!users){
         throw new ErrorHandler(404, 'No records found')
         }
@@ -16,14 +19,17 @@ const getAllUsersService = async (next) => {
     }
 }
 
-const fetchByIdService = async(id, next) => {
+const fetchByIdService = async(userId, next) => {
     logger.info('Inside getUserById adminService')
     try {
-        const user = await User.findById(id)
+        let id = mongoose.Types.ObjectId(userId)
+        const user = await User.aggregate([
+            { $match: { _id: id }}
+        ])
         if(!user) throw new ErrorHandler(404, 'User not found')
         return user
     } catch (error) {
-        logger.error(error)
+        logger.error(error.message)
         next(error)
     }
 }
@@ -43,35 +49,16 @@ const deleteUserService = async (userId, next) => {
     }
 }
 
-const disableUserService = async(next)=>{
-    logger.info('Inside disableUser adminService')
-    try{
-        const user = await User.findOne({email})
-        if(!user){
-            throw new ErrorHandler(404, 'No records found')
-        }
-        user.status = 'inActive',
-        user.isVerified = false
-        await user.save()
-        return user
-
-    }catch(error) {
-        logger.error(error)
-        next(error)
-    }
-    
-}
-
-const updateUserService = async (id, userObj) => {
+const updateUserService = async (userId, userObj, next) => {
     logger.info('Inside updateUser adminService')
     try {
-        const findUser = await User.findByIdAndUpdate(id, userObj, { new:true })
+        const findUser = await User.findByIdAndUpdate(userId, userObj, { new:true })
         if(!findUser)
         throw new ErrorHandler(404, 'User not found')
         return findUser
     } catch (error) {
-        logger.error(error)
-        throw new Error(error.message)
+        logger.error(error.message)
+        next(error)
     }
 }
 
@@ -79,7 +66,6 @@ const updateUserService = async (id, userObj) => {
 
 export {
     getAllUsersService,
-    disableUserService,
     deleteUserService,
     updateUserService,
     fetchByIdService
