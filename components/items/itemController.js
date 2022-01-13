@@ -1,4 +1,4 @@
-import { createItemService, getItemsService, updateItemService} from "./itemService.js";
+import { createItemService, getItemsService, updateItemService, getItemByIdService} from "./itemService.js";
 import logger from '../../middlewares/logger.js';
 import { ErrorHandler, handleResponse } from "../../helpers/globalHandler.js";
 import User from '../users/userModel.js'
@@ -18,6 +18,7 @@ const createItem = async(req, res, next)=>{
             desc:desc,
             price:price,
             createdBy: vendorId,
+            currentOwner: vendorId
             // image:req.file.path
         }
         const newItem = await createItemService(itemObj)
@@ -36,7 +37,7 @@ const getItems = async(req, res, next)=>{
     logger.info('Inside getItems Controller')
     try {
         const items = await getItemsService()
-        if(items.length === 0)
+        if(!items)
             throw new ErrorHandler(400, 'No items found')
         return handleResponse({
             res,
@@ -48,6 +49,24 @@ const getItems = async(req, res, next)=>{
         next(err)
     }
 }
+const getItemById = async(req, res, next)=>{
+    logger.info('Inside getItems Controller')
+    try {
+        const { itemId } = req.params
+        const itemDetails = await getItemByIdService(itemId)
+        if(!itemDetails)
+            throw new ErrorHandler(400, 'No items found')
+        return handleResponse({
+            res,
+            msg:'success',
+            data:itemDetails
+        })
+    } catch (err) {
+        logger.error(err.message)
+        next(err)
+    }
+}
+
 
 const deleteItem = async(req, res, next)=>{
     logger.info('Inside deleteItem Controller')
@@ -107,5 +126,6 @@ export {
     createItem,
     getItems,
     deleteItem,
-    updateItem
+    updateItem,
+    getItemById
 }

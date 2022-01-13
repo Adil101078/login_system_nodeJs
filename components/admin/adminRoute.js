@@ -10,7 +10,8 @@ import {
     updateUser,
     getUserById,
     acceptVendorApproval,
-    rejectVendorApproval
+    rejectVendorApproval,
+    updateUserPassword
 } from './adminController.js'
 const adminRoute = express.Router();
 
@@ -24,6 +25,7 @@ adminRoute.put('/user/:userId',verifyToken, updateUser)
 adminRoute.put('/user/enable',verifyToken, enableUser)
 adminRoute.put('/acceptVendor/:vendorId', verifyToken, acceptVendorApproval)
 adminRoute.put('/rejectVendor/:vendorId', verifyToken, rejectVendorApproval)
+adminRoute.put('/updateUserPassword/:userId', verifyToken, updateUserPassword)
 
 
 

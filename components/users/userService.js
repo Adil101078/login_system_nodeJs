@@ -1,6 +1,7 @@
 import User from  './userModel.js'
 import logger from '../../middlewares/logger.js'
 import { ErrorHandler } from '../../helpers/globalHandler.js'
+import mongoose from 'mongoose'
 
 const createService = async (data, next)=>{
   logger.info('Inside createUser Servcie')
@@ -16,8 +17,12 @@ const createService = async (data, next)=>{
 const getAllUsersService = async(next)=>{
   logger.info('Inside getAllusers Service')
   try{
-    const data = await User.find({})
-    return {data:data}
+    const data = await User.aggregate([
+      {
+        $match:{ }
+      }
+    ])
+    return data
 
   }catch(error){
     logger.error(error)
@@ -28,9 +33,14 @@ const getAllUsersService = async(next)=>{
 const getUserByIdService = async(userId, next)=>{
   logger.info('Inside getUserById Service')
   try{
-    
-      const result = await User.findById(userId)
-        if(result)
+      let id = mongoose.Types.ObjectId(userId)
+      const result = await User.aggregate([
+        {
+          $match: { _id: id }
+          
+        }
+      ])
+      if(result)
          return result
     
       throw new ErrorHandler(404, 'No user found by given Id')

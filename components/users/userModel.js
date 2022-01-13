@@ -4,9 +4,10 @@ import jwt from 'jsonwebtoken'
 
 const userSchema = new mongoose.Schema({
 	username: { type: String },
-	email: { type: String, required: true },
+	email: { type: String, required: true, unique: true, lowercase: true },
 	fullname: { type: String },
-	password: { type: String, required: true },
+	password: { type: String, required: true, select: false },
+	passwordChangedAt: { type: Date },
 	image: { type: String, default: null },
 	emailToken: { type: String },
 	isVerified: { type: Boolean, default: false },
@@ -24,7 +25,7 @@ const userSchema = new mongoose.Schema({
 		type: String,
 		enum: ['sell']
 	},
-	phoneNumber: { type: String, required: true },
+	phoneNumber: { type: String },
 	otp: { type: Number, default: null },
 	resetToken: { type: String, default: null },
 	followers: [
@@ -41,17 +42,19 @@ const userSchema = new mongoose.Schema({
 	],
 	followersCount: { type: Number, default: 0 },
 	followingsCount: { type: Number, default: 0 },
-})
+}, { timestamps: true })
 
 userSchema.pre('save', async function (next) {
 	if (!this.isModified('password')) return next()
-	this.password = await bcrypt.hash(this.password, 12)
+	this.password = await bcrypt.hash(this.password, 10)
 	next()
 })
-userSchema.methods.verifyPassword = async function (
-	candidatePassword,
-	userPassword
-) {
+userSchema.pre('save', async function (next) {
+	if (!this.isModified('password') || this.isNew ) return next()
+	this.passwordChangedAt = Date.now()
+	next()
+})
+userSchema.methods.correctPassword = async function (candidatePassword, userPassword){
 	return await bcrypt.compare(candidatePassword, userPassword)
 }
 
